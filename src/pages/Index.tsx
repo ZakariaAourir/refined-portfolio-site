@@ -53,9 +53,9 @@ performance and meet business objectives
       </section>
       
       {/* Clients/Partners Section */}
-      <section className="py-16 bg-black">
+      <section className="bg-black">
         <div className="container mx-auto px-4 md:px-8">
-          <h2 className="sr-only">Trusted Clients</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Trusted Clients</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
             {[
               'public/clients/1.png',
