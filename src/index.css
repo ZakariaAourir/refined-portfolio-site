@@ -148,4 +148,31 @@
   .grid-background {
     @apply bg-black bg-grid-pattern;
   }
+  
+  /* Logo Scroll Animation */
+  .logos-scroll-container {
+    @apply w-full overflow-hidden relative;
+  }
+  
+  .logos-scroll {
+    @apply flex items-center whitespace-nowrap;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .logos-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  .logo-item {
+    @apply inline-flex justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 w-24 md:w-36 mx-8;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

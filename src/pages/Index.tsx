@@ -7,11 +7,11 @@ import Footer from '@/components/Footer';
 import { projectsData } from '@/data/projectsData';
 
 const Index = () => {
-  // Featured projects to show on homepage
-  const featuredProjects = [
-    projectsData.reporting,
-    projectsData.telehealth
-  ];
+  // Get all projects for the homepage
+  const allProjects = Object.values(projectsData);
+  
+  // Featured projects to show on homepage (first 3 projects)
+  const featuredProjects = allProjects.slice(0, 3);
 
   return (
     <>
@@ -40,10 +40,11 @@ const Index = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-6xl mx-auto">
-            👋 I'm Zakaria, a  UX designer focused on creating intuitive, accessible digital experiences through user-centered 
-methodologies and 5+ years of front-end development expertise. Specializes in combining user 
-research, interactive prototyping, and technical implementation to deliver solutions that enhance 
-performance and meet business objectives
+            👋 I'm Zakaria, a UX Designer and Front-end Developer with 5+ years of experience creating intuitive, accessible digital experiences. I specialize in combining thorough user research with technical implementation skills to deliver meaningful solutions.
+            <br /><br />
+            My approach merges analytical thinking with creative problem-solving to transform complex challenges into user-friendly experiences. Whether conducting user interviews, crafting wireframes, or implementing front-end code, I focus on creating products that are both beautiful and functional.
+            <br /><br />
+            With experience across healthcare, fintech, and supply chain industries, I bring a versatile perspective that balances business objectives with genuine user needs.
           </p>
           
           <Link to="/contact" className="btn-primary text-lg">
@@ -53,24 +54,44 @@ performance and meet business objectives
       </section>
       
       {/* Clients/Partners Section */}
-      <section className="bg-black">
+      <section className="bg-black overflow-hidden py-16">
         <div className="container mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Trusted Clients</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-            {[
-              'public/clients/1.png',
-              'public/clients/2.png',
-              'public/clients/3.png',
-              'public/clients/4.png',
-              'public/clients/5.png',
-              'public/clients/6.png',
-              'public/clients/7.png',
-              'public/clients/8.png',
-            ].map((logo, idx) => (
-              <div key={idx} className="opacity-50 hover:opacity-100 transition-opacity duration-300 w-24 md:w-36">
-                <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
-              </div>
-            ))}
+          
+          <div className="logos-scroll-container">
+            <div className="logos-scroll">
+              {/* First set of logos for seamless loop */}
+              {[
+                'public/clients/1.png',
+                'public/clients/2.png',
+                'public/clients/3.png',
+                'public/clients/4.png',
+                'public/clients/5.png',
+                'public/clients/6.png',
+                'public/clients/7.png',
+                'public/clients/8.png',
+              ].map((logo, idx) => (
+                <div key={`first-${idx}`} className="logo-item">
+                  <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
+                </div>
+              ))}
+              
+              {/* Duplicate set of logos for continuous effect */}
+              {[
+                'public/clients/1.png',
+                'public/clients/2.png',
+                'public/clients/3.png',
+                'public/clients/4.png',
+                'public/clients/5.png',
+                'public/clients/6.png',
+                'public/clients/7.png',
+                'public/clients/8.png',
+              ].map((logo, idx) => (
+                <div key={`second-${idx}`} className="logo-item">
+                  <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
