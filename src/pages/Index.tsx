@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,6 +11,18 @@ const Index = () => {
   
   // Featured projects to show on homepage (first 3 projects)
   const featuredProjects = allProjects.slice(0, 3);
+
+  // Logo images for client section
+  const clientLogos = [
+    'public/clients/1.png',
+    'public/clients/2.png',
+    'public/clients/3.png',
+    'public/clients/4.png',
+    'public/clients/5.png',
+    'public/clients/6.png',
+    'public/clients/7.png',
+    'public/clients/8.png',
+  ];
 
   return (
     <>
@@ -53,49 +64,31 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Clients/Partners Section */}
+      {/* Clients/Partners Section - Improved */}
       <section className="bg-black overflow-hidden py-16">
         <div className="container mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Trusted Clients</h2>
           
           <div className="logos-scroll-container">
             <div className="logos-scroll">
-              {/* First set of logos for seamless loop */}
-              {[
-                'public/clients/1.png',
-                'public/clients/2.png',
-                'public/clients/3.png',
-                'public/clients/4.png',
-                'public/clients/5.png',
-                'public/clients/6.png',
-                'public/clients/7.png',
-                'public/clients/8.png',
-              ].map((logo, idx) => (
+              {/* First set of logos */}
+              {clientLogos.map((logo, idx) => (
                 <div key={`first-${idx}`} className="logo-item">
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-32 md:w-48 h-auto" // Increased width
+                    className="w-48 md:w-64 h-auto" 
                   />
                 </div>
               ))}
               
               {/* Duplicate set of logos for continuous effect */}
-              {[
-                'public/clients/1.png',
-                'public/clients/2.png',
-                'public/clients/3.png',
-                'public/clients/4.png',
-                'public/clients/5.png',
-                'public/clients/6.png',
-                'public/clients/7.png',
-                'public/clients/8.png',
-              ].map((logo, idx) => (
+              {clientLogos.map((logo, idx) => (
                 <div key={`second-${idx}`} className="logo-item">
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-32 md:w-48 h-auto" // Increased width
+                    className="w-48 md:w-64 h-auto" 
                   />
                 </div>
               ))}
