@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -10,8 +11,7 @@ const Index = () => {
   const featuredProjects = [
     projectsData.telehealth,
     projectsData.reporting,
-    projectsData.freterium,
-    projectsData.cybershield
+    projectsData.freterium
   ];
 
   return (

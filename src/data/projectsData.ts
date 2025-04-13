@@ -214,6 +214,13 @@ export const projectsData: ProjectsDataRecord = {
       author: "Jessica Chen",
       title: "Operations Director, DataViz Enterprise"
     },
+    reflection: "This project reinforced the importance of deep user research before attempting redesign. By understanding the specific pain points across different user roles, we could create targeted solutions that addressed real needs rather than assumptions.",
+    reflectionPoints: [
+      "Detailed task analysis reveals inefficiencies that aren't apparent in general user feedback",
+      "Support ticket analysis provides quantitative data about actual user struggles",
+      "Cross-role usability testing is essential for enterprise tools used by different departments",
+      "Performance metrics should be defined early and measured consistently throughout implementation"
+    ],
     nextProject: "freterium"
   },
   freterium: {
@@ -245,37 +252,13 @@ export const projectsData: ProjectsDataRecord = {
       author: "Mohammed El-Khatib",
       title: "Supply Chain Director, Global Logistics Co."
     },
-    nextProject: "cybershield"
-  },
-  cybershield: {
-    title: "CyberShield",
-    subtitle: "Making cybersecurity accessible",
-    category: "Cyber Security Platform",
-    client: "SecureTech Inc.",
-    duration: "3 Months",
-    role: "Product Designer",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    overview: "SecureTech Inc. wanted to demystify cybersecurity for small businesses and non-technical users by creating an intuitive platform that simplified threat detection and protection.",
-    mission: "Cybersecurity tools have traditionally been designed for IT professionals, leaving small businesses vulnerable. Our mission was to create an interface that translated complex security concepts into actionable insights for non-technical users.",
-    opportunity: "By making cybersecurity accessible to everyone, we could help protect more small businesses from increasingly sophisticated cyber threats and data breaches.",
-    results: "The redesigned platform saw a 65% increase in user adoption and helped prevent over 1,200 potential security breaches for small business customers within the first year.",
-    valueProps: [
-      "Real-time threat visualization in non-technical language",
-      "One-click security improvements based on personalized recommendations",
-      "Automated vulnerability scanning with visual results",
-      "Security health score with actionable improvement steps"
+    reflection: "This project highlighted the value of being both a designer and developer. By understanding technical constraints while designing, and user needs while developing, I could create solutions that were both user-friendly and technically feasible.",
+    reflectionPoints: [
+      "Complex workflows need to be broken into intuitive steps while maintaining context",
+      "Direct implementation experience leads to more feasible design solutions",
+      "User-centered design principles apply even to highly specialized professional tools",
+      "Cross-functional collaboration between design and development teams improves outcomes"
     ],
-    researchData: [
-      "Interviewed small business owners about their cybersecurity concerns",
-      "Analyzed key user friction points in existing security tools",
-      "Tested security visualization concepts with non-technical users",
-      "Conducted comparative usability testing against leading products"
-    ],
-    testimonial: {
-      quote: "Alex translated our complex security technology into a user experience that even my least technical clients can understand and use effectively.",
-      author: "Sarah Jenkins",
-      title: "CEO, SecureTech Inc."
-    },
     nextProject: "telehealth"
   }
 };
