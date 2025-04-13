@@ -75,7 +75,7 @@ const Index = () => {
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-48 md:w-64 lg:w-80 h-auto" // Significantly increased width
+                    className="w-32 md:w-48 h-auto" // Increased width
                   />
                 </div>
               ))}
@@ -95,7 +95,7 @@ const Index = () => {
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-48 md:w-64 lg:w-80 h-auto" // Significantly increased width
+                    className="w-32 md:w-48 h-auto" // Increased width
                   />
                 </div>
               ))}
