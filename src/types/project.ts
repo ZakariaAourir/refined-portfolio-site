@@ -6,18 +6,24 @@ export interface ProjectData {
   client: string;
   duration: string;
   role: string;
+  tools?: string[];
   image: string;
   overview?: string;
   mission?: string;
   opportunity?: string;
   researchData?: string[];
   valueProps?: string[];
+  designProcess?: string;
+  designImages?: string[];
   results?: string;
+  metrics?: string[];
   testimonial?: {
     quote: string;
     author: string;
     title: string;
   };
+  reflection?: string;
+  reflectionPoints?: string[];
   nextProject: string;
   description?: string;
 }

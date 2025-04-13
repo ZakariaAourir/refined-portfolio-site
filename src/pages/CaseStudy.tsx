@@ -8,7 +8,9 @@ import CaseStudyOverview from '@/components/case-study/CaseStudyOverview';
 import CaseStudyMission from '@/components/case-study/CaseStudyMission';
 import CaseStudyOpportunity from '@/components/case-study/CaseStudyOpportunity';
 import CaseStudyResearch from '@/components/case-study/CaseStudyResearch';
+import CaseStudyDesignProcess from '@/components/case-study/CaseStudyDesignProcess';
 import CaseStudyResults from '@/components/case-study/CaseStudyResults';
+import CaseStudyReflection from '@/components/case-study/CaseStudyReflection';
 import CaseStudyNextProject from '@/components/case-study/CaseStudyNextProject';
 import CaseStudyNotFound from '@/components/case-study/CaseStudyNotFound';
 import { projectsData } from '@/data/projectsData';
@@ -33,7 +35,9 @@ const CaseStudy = () => {
       <CaseStudyMission project={project} />
       <CaseStudyOpportunity project={project} />
       <CaseStudyResearch project={project} />
+      <CaseStudyDesignProcess project={project} />
       <CaseStudyResults project={project} />
+      <CaseStudyReflection project={project} />
       
       {nextProject && (
         <CaseStudyNextProject 

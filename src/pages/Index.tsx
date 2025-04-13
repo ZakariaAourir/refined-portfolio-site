@@ -3,8 +3,17 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import { projectsData } from '@/data/projectsData';
 
 const Index = () => {
+  // Featured projects to show on homepage
+  const featuredProjects = [
+    projectsData.telehealth,
+    projectsData.reporting,
+    projectsData.freterium,
+    projectsData.cybershield
+  ];
+
   return (
     <>
       <NavBar />
@@ -67,129 +76,43 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Selected Works</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Project 1: Telehealth Solution */}
-            <div className="card-project">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png" 
-                  alt="Telehealth Solution Project" 
-                  className="w-full h-64 object-cover object-top transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">Telehealth Solution with Hologram Technology</h3>
-                    <p className="text-sm text-gray-400">Healthcare</p>
+            {featuredProjects.map((project, index) => {
+              const projectSlug = Object.entries(projectsData).find(([_, data]) => data.title === project.title)?.[0];
+              
+              return (
+                <div key={index} className="card-project">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                    />
                   </div>
-                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    UX Designer & Researcher
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Designed an innovative mobile solution to address healthcare accessibility challenges in rural areas. The project incorporated hologram technology to enable remote consultations with specialists, significantly reducing travel time for patients with limited mobility.
-                </p>
-                <Link 
-                  to="/case-study/telehealth" 
-                  className="inline-flex items-center text-accent hover:underline"
-                >
-                  View case study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Project 2: Reporting Module Optimization */}
-            <div className="card-project">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                  alt="Reporting Module Optimization Project" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">Reporting Module Optimization</h3>
-                    <p className="text-sm text-gray-400">Enterprise Software</p>
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                        <p className="text-sm text-gray-400">{project.category}</p>
+                      </div>
+                      <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                        {project.role.split('&')[0].trim()}
+                      </span>
+                    </div>
+                    <p className="text-gray-300 mb-4">
+                      {project.overview || project.description}
+                    </p>
+                    {projectSlug && (
+                      <Link 
+                        to={`/case-study/${projectSlug}`} 
+                        className="inline-flex items-center text-accent hover:underline"
+                      >
+                        View case study <ArrowRight size={16} className="ml-2" />
+                      </Link>
+                    )}
                   </div>
-                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    UX Researcher & Analyst
-                  </span>
                 </div>
-                <p className="text-gray-300 mb-4">
-                  Transformed a complex, inefficient reporting system into an intuitive tool that reduced task completion time by 40%. Through extensive user research and workflow analysis, I identified and eliminated key pain points while enhancing data visualization capabilities.
-                </p>
-                <Link 
-                  to="/case-study/reporting" 
-                  className="inline-flex items-center text-accent hover:underline"
-                >
-                  View case study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Project 3: Freterium Platform */}
-            <div className="card-project">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                  alt="Freterium Platform Project" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">Freterium Supply Chain Platform</h3>
-                    <p className="text-sm text-gray-400">Supply Chain</p>
-                  </div>
-                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    Front-end Engineer & UX Designer
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Led the redesign of a cloud-based supply chain platform's interface, improving overall performance and UX by 25%. The project involved reimagining complex logistics workflows while ensuring technical feasibility through direct front-end implementation.
-                </p>
-                <Link 
-                  to="/case-study/freterium" 
-                  className="inline-flex items-center text-accent hover:underline"
-                >
-                  View case study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Project 4: Keep existing */}
-            <div className="card-project">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                  alt="CyberShield Project" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">CyberShield</h3>
-                    <p className="text-sm text-gray-400">Cyber Security Platform</p>
-                  </div>
-                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    Product Designer
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Reimagining the user experience for a complex cyber security solution, making it accessible to non-technical users.
-                </p>
-                <Link 
-                  to="/case-study/cybershield" 
-                  className="inline-flex items-center text-accent hover:underline"
-                >
-                  View case study <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
-            </div>
+              );
+            })}
           </div>
           
           <div className="text-center">

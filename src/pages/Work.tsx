@@ -4,64 +4,14 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import { projectsData } from '@/data/projectsData';
 
 const Work = () => {
-  const projects = [
-    {
-      id: 'kwiks',
-      title: 'KWIKS',
-      category: 'SaaS Recruitment Platform',
-      duration: '3 Months',
-      role: 'Lead Product Designer',
-      image: 'public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png',
-      description: 'Redesigning their platform\'s UI/UX and integrating AI features to enhance user experience and streamline recruitment.',
-    },
-    {
-      id: 'healthconnect',
-      title: 'HealthConnect',
-      category: 'Healthcare Mobile App',
-      duration: '4 Months',
-      role: 'UX Researcher & UI Designer',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      description: 'Creating an intuitive interface for patients to manage appointments, medications, and communicate with healthcare providers.',
-    },
-    {
-      id: 'financeflow',
-      title: 'FinanceFlow',
-      category: 'Fintech Dashboard',
-      duration: '2 Months',
-      role: 'UI Designer',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      description: 'Designing a complex financial dashboard that simplifies data visualization and transaction management for users.',
-    },
-    {
-      id: 'cybershield',
-      title: 'CyberShield',
-      category: 'Cyber Security Platform',
-      duration: '3 Months',
-      role: 'Product Designer',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      description: 'Reimagining the user experience for a complex cyber security solution, making it accessible to non-technical users.',
-    },
-    {
-      id: 'autoconnect',
-      title: 'AutoConnect',
-      category: 'Automotive Mobile App',
-      duration: '3 Months',
-      role: 'Product Designer',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      description: 'Creating a mobile app that connects car owners with service providers for maintenance, repairs, and roadside assistance.',
-    },
-    {
-      id: 'travelease',
-      title: 'TravelEase',
-      category: 'Travel Planning Platform',
-      duration: '5 Months',
-      role: 'UX Designer',
-      image: 'https://images.unsplash.com/photo-1499363536502-87642509e31b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      description: 'Designing a travel planning platform that helps users discover, plan, and book personalized trips with ease.',
-    },
-  ];
+  // Convert projectsData object to array for easier mapping
+  const projects = Object.entries(projectsData).map(([slug, data]) => ({
+    id: slug,
+    ...data
+  }));
 
   return (
     <>
@@ -98,11 +48,11 @@ const Work = () => {
                       <p className="text-sm text-gray-400">{project.category}</p>
                     </div>
                     <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                      {project.role}
+                      {project.role.split('&')[0].trim()}
                     </span>
                   </div>
                   <p className="text-gray-300 mb-4">
-                    {project.description}
+                    {project.subtitle || project.description}
                   </p>
                   <Link 
                     to={`/case-study/${project.id}`} 
