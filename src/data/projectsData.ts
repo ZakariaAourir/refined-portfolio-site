@@ -3,47 +3,6 @@ import { ProjectsDataRecord } from "@/types/project";
 
 // Define project data (normally this would come from an API or CMS)
 export const projectsData: ProjectsDataRecord = {
-  webapplication: {
-    title: "Construction Management Platform Redesign",
-    subtitle: "Improving a web application through User interviews and observation",
-    category: "UX Research",
-    client: "ConstructTech Solutions",
-    duration: "3 Months",
-    role: "UX Research Lead",
-    tools: ["User Interviews", "Observation Sessions", "Figma", "Miro"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    overview: "ConstructTech Solutions needed to improve their construction management platform that was experiencing high abandonment rates and negative feedback. Through comprehensive user research including interviews and observation sessions, we identified critical usability issues affecting productivity and user satisfaction.",
-    mission: "Construction professionals were struggling with a complex, unintuitive platform that was hindering rather than helping their daily workflows. The interface required too many clicks for common tasks, used technical terminology unfamiliar to field workers, and had an information architecture that didn't match users' mental models of construction project management.",
-    opportunity: "By reimagining the platform's structure and workflows based on actual user behavior, we could create an intuitive system that aligned with construction professionals' existing processes while leveraging technology to enhance efficiency.",
-    researchData: [
-      "Conducted 15 in-depth interviews with various construction team roles (project managers, supervisors, field workers)",
-      "Performed 8 on-site observation sessions to document actual workflow patterns and pain points",
-      "Analyzed task completion rates, identifying 4 critical workflows with >70% failure rates",
-      "Created comprehensive journey maps highlighting emotional low points during platform usage",
-      "Identified terminology mismatches between platform language and industry vernacular"
-    ],
-    valueProps: [
-      "Task-oriented interface aligned with construction workflow patterns",
-      "Simplified navigation reducing clicks for common actions by 60%",
-      "Customizable dashboard showing project status at appropriate levels of detail",
-      "Improved mobile experience for on-site data entry and access"
-    ],
-    designProcess: "Using research insights, we created priority matrices to identify the most impactful issues to address. We developed wireframes that drastically simplified navigation paths for common tasks and restructured the information architecture to align with users' mental models. After multiple iterations based on stakeholder feedback, we created high-fidelity prototypes for testing with actual users.",
-    results: "The redesigned platform achieved a 42% increase in user engagement, 65% reduction in support tickets, and a 38% improvement in task completion rates. Time spent on daily reporting tasks decreased by 25%, representing significant time savings across the organization.",
-    testimonial: {
-      quote: "The research-driven approach completely transformed our platform. For the first time, we truly understand how our users work and have built something that feels intuitive to them rather than forcing them to adapt to our system.",
-      author: "Michael Chen",
-      title: "CTO, ConstructTech Solutions"
-    },
-    reflection: "This project highlighted the critical importance of observation in addition to interviews. What users said they did often differed from their actual behavior, providing invaluable insights that wouldn't have been captured through conversations alone.",
-    reflectionPoints: [
-      "Field research provides context that office-based interviews cannot capture",
-      "Technical terminology should always align with users' everyday language",
-      "Testing with actual users in their work environment reveals issues that aren't apparent in controlled settings",
-      "Information architecture should reflect users' mental models rather than organizational structure"
-    ],
-    nextProject: "tontina"
-  },
   tontina: {
     title: "Tontina",
     subtitle: "Redesigning Traditional African Lending for the Digital Student",
@@ -222,43 +181,5 @@ export const projectsData: ProjectsDataRecord = {
       "Performance metrics should be defined early and measured consistently throughout implementation"
     ],
     nextProject: "freterium"
-  },
-  freterium: {
-    title: "Freterium Supply Chain Platform",
-    subtitle: "Reimagining logistics workflow management",
-    category: "Supply Chain",
-    client: "Freterium",
-    duration: "10 Months",
-    role: "Front-end Engineer & UX Designer",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    overview: "Led the redesign of a cloud-based supply chain platform's interface, improving overall performance and UX by 25%. The project involved reimagining complex logistics workflows while ensuring technical feasibility through direct front-end implementation.",
-    mission: "Freterium's existing platform was powerful but difficult to navigate, leading to customer frustration and reduced adoption. As logistics operations grew more complex, the interface needed to scale accordingly while remaining intuitive.",
-    opportunity: "By combining UX expertise with front-end implementation skills, we could create a seamless logistics management experience that handles complexity behind the scenes while presenting users with a clean, intuitive interface.",
-    results: "The redesign resulted in a 25% improvement in task completion rates, 40% reduction in onboarding time for new customers, and a significant decrease in support requirements despite increasing platform capabilities.",
-    valueProps: [
-      "Unified dashboard for end-to-end supply chain visibility",
-      "Intelligent workflow automation with exception handling",
-      "Real-time tracking and notifications system",
-      "Collaborative tools for multi-stakeholder logistics coordination"
-    ],
-    researchData: [
-      "Shadowed logistics coordinators to understand daily workflow patterns",
-      "Analyzed user interaction data from the existing platform",
-      "Conducted usability testing with logistics professionals across different company sizes",
-      "Mapped complex supply chain processes to identify optimization opportunities"
-    ],
-    testimonial: {
-      quote: "The redesigned platform has completely transformed how we manage our logistics operations. What used to require multiple systems and constant back-and-forth now flows seamlessly in one intuitive interface.",
-      author: "Mohammed El-Khatib",
-      title: "Supply Chain Director, Global Logistics Co."
-    },
-    reflection: "This project highlighted the value of being both a designer and developer. By understanding technical constraints while designing, and user needs while developing, I could create solutions that were both user-friendly and technically feasible.",
-    reflectionPoints: [
-      "Complex workflows need to be broken into intuitive steps while maintaining context",
-      "Direct implementation experience leads to more feasible design solutions",
-      "User-centered design principles apply even to highly specialized professional tools",
-      "Cross-functional collaboration between design and development teams improves outcomes"
-    ],
-    nextProject: "telehealth"
   }
 };

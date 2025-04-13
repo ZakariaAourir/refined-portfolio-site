@@ -61,7 +61,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Hi, I'm Alex Morgan
+                Hi, I'm Zakaria Aourir
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 A product designer and UX researcher with a passion for creating intuitive, user-centered digital experiences.
@@ -84,7 +84,7 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden h-[500px]">
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" 
-                alt="Alex Morgan" 
+                alt="Zakaria Aourir" 
                 className="w-full h-full object-cover"
               />
             </div>

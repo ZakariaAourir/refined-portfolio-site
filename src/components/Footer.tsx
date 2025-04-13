@@ -11,13 +11,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Alex Morgan</h3>
-            <p className="text-gray-400 mb-6 max-w-md">
-              A versatile product designer with 5+ years of crafting intuitive digital experiences across multiple industries.
+            <h3 className="text-2xl font-bold mb-4">Zakaria Aourir</h3>
+            <p className="text-gray-400 mb-6 max-w-lg">
+              A versatile UX designer with 5+ years of web developement, crafting intuitive digital experiences across multiple industries.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/zakaria-aourir-851098164/" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-white hover:text-accent transition-colors"
@@ -26,16 +26,7 @@ const Footer: React.FC = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://dribbble.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-white hover:text-accent transition-colors"
-                aria-label="Dribbble"
-              >
-                <Dribbble size={20} />
-              </a>
-              <a 
-                href="https://twitter.com" 
+                href="https://x.com/ZackDesigns01" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-white hover:text-accent transition-colors"
@@ -44,7 +35,7 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a>
               <a 
-                href="mailto:hello@alexmorgan.design" 
+                href="mailto:zakaria1997aouir@gmail.com" 
                 className="text-white hover:text-accent transition-colors"
                 aria-label="Email"
               >
@@ -66,8 +57,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="text-gray-400">hello@alexmorgan.design</li>
-              <li className="text-gray-400">San Francisco, CA</li>
+              <li className="text-gray-400">zakaria1997aouir@gmail.com</li>
+              <li className="text-gray-400">Paris, France</li>
               <li>
                 <Link to="/contact" className="text-accent hover:underline">
                   Book a free consultation
@@ -79,7 +70,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} Alex Morgan. All rights reserved.
+            © {currentYear} Zakaria Aourir. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-500 text-sm hover:text-white transition-colors">

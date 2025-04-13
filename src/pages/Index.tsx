@@ -9,9 +9,8 @@ import { projectsData } from '@/data/projectsData';
 const Index = () => {
   // Featured projects to show on homepage
   const featuredProjects = [
-    projectsData.telehealth,
     projectsData.reporting,
-    projectsData.freterium
+    projectsData.telehealth
   ];
 
   return (
@@ -23,25 +22,28 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-8 text-center">
           <div className="flex justify-center mb-3">
             <div className="flex space-x-1">
-              {[1, 2, 3].map((i) => (
+              {[1, 3, 4, 8].map((i) => (
                 <div key={i} className="w-8 h-8 rounded-full overflow-hidden">
                   <img 
-                    src={`https://randomuser.me/api/portraits/men/${i + 10}.jpg`} 
+                    src={`public/clients/${i}.png`} 
                     alt="Client avatar" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </div>
-            <p className="ml-3 text-sm text-gray-400">Trusted by 10+ clients</p>
+            <p className="ml-3 text-sm text-gray-400">Trusted by 5+ clients</p>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight max-w-4xl mx-auto">
             Crafting Delightful Digital Experiences
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            👋 I'm Zakaria, a UX Designer and Front-end Developer with 5+ years of experience creating intuitive, accessible digital experiences. I specialize in combining thorough user research with technical implementation skills to deliver meaningful solutions.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-6xl mx-auto">
+            👋 I'm Zakaria, a  UX designer focused on creating intuitive, accessible digital experiences through user-centered 
+methodologies and 5+ years of front-end development expertise. Specializes in combining user 
+research, interactive prototyping, and technical implementation to deliver solutions that enhance 
+performance and meet business objectives
           </p>
           
           <Link to="/contact" className="btn-primary text-lg">
@@ -56,11 +58,14 @@ const Index = () => {
           <h2 className="sr-only">Trusted Clients</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
             {[
-              'public/lovable-uploads/70bde27d-0e12-4d2b-86bb-f940e952e85c.png',
-              'public/lovable-uploads/80b4effd-6b6b-46ba-9ec0-50d71b62bcd0.png',
-              'public/lovable-uploads/b089eca0-1fda-4d58-9e17-778885e796cf.png',
-              'public/lovable-uploads/e1467485-238d-419b-a09e-bd6cb4fa5688.png',
-              'public/lovable-uploads/ae9fda9a-a285-40e8-8113-11c4ff9f4c1b.png',
+              'public/clients/1.png',
+              'public/clients/2.png',
+              'public/clients/3.png',
+              'public/clients/4.png',
+              'public/clients/5.png',
+              'public/clients/6.png',
+              'public/clients/7.png',
+              'public/clients/8.png',
             ].map((logo, idx) => (
               <div key={idx} className="opacity-50 hover:opacity-100 transition-opacity duration-300 w-24 md:w-36">
                 <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
@@ -179,8 +184,8 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" 
-                  alt="Alex Morgan" 
+                  src="public/me/me.jpg" 
+                  alt="Zakaria Aourir" 
                   className="w-full h-full object-cover"
                 />
               </div>

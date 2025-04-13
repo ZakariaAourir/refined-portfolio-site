@@ -36,7 +36,7 @@ const NavBar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8">
         <nav className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold">
-            Alex Morgan
+            Zakaria Aourir
           </Link>
           
           {/* Desktop Menu */}
