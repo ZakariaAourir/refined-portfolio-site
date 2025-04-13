@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -33,7 +32,7 @@ const Index = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            I'm Alex Morgan, a versatile product designer with 5+ years of crafting intuitive digital experiences across multiple industries.
+            👋 I'm Zakaria, a UX Designer and Front-end Developer with 5+ years of experience creating intuitive, accessible digital experiences. I specialize in combining thorough user research with technical implementation skills to deliver meaningful solutions.
           </p>
           
           <Link to="/contact" className="btn-primary text-lg">
@@ -68,30 +67,30 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Selected Works</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Project 1: KWIKS */}
+            {/* Project 1: Telehealth Solution */}
             <div className="card-project">
               <div className="relative overflow-hidden">
                 <img 
                   src="public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png" 
-                  alt="KWIKS Project" 
+                  alt="Telehealth Solution Project" 
                   className="w-full h-64 object-cover object-top transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">KWIKS</h3>
-                    <p className="text-sm text-gray-400">SaaS Recruitment Platform</p>
+                    <h3 className="text-2xl font-bold mb-2">Telehealth Solution with Hologram Technology</h3>
+                    <p className="text-sm text-gray-400">Healthcare</p>
                   </div>
                   <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    Lead Product Designer
+                    UX Designer & Researcher
                   </span>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Redesigning their platform's UI/UX and integrating AI features to enhance user experience and streamline recruitment.
+                  Designed an innovative mobile solution to address healthcare accessibility challenges in rural areas. The project incorporated hologram technology to enable remote consultations with specialists, significantly reducing travel time for patients with limited mobility.
                 </p>
                 <Link 
-                  to="/case-study/kwiks" 
+                  to="/case-study/telehealth" 
                   className="inline-flex items-center text-accent hover:underline"
                 >
                   View case study <ArrowRight size={16} className="ml-2" />
@@ -99,30 +98,30 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Project 2: HealthConnect */}
+            {/* Project 2: Reporting Module Optimization */}
             <div className="card-project">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                  alt="HealthConnect Project" 
+                  alt="Reporting Module Optimization Project" 
                   className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">HealthConnect</h3>
-                    <p className="text-sm text-gray-400">Healthcare Mobile App</p>
+                    <h3 className="text-2xl font-bold mb-2">Reporting Module Optimization</h3>
+                    <p className="text-sm text-gray-400">Enterprise Software</p>
                   </div>
                   <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    UX Researcher & UI Designer
+                    UX Researcher & Analyst
                   </span>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Creating an intuitive interface for patients to manage appointments, medications, and communicate with healthcare providers.
+                  Transformed a complex, inefficient reporting system into an intuitive tool that reduced task completion time by 40%. Through extensive user research and workflow analysis, I identified and eliminated key pain points while enhancing data visualization capabilities.
                 </p>
                 <Link 
-                  to="/case-study/healthconnect" 
+                  to="/case-study/reporting" 
                   className="inline-flex items-center text-accent hover:underline"
                 >
                   View case study <ArrowRight size={16} className="ml-2" />
@@ -130,30 +129,30 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Project 3: FinanceFlow */}
+            {/* Project 3: Freterium Platform */}
             <div className="card-project">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
-                  alt="FinanceFlow Project" 
+                  alt="Freterium Platform Project" 
                   className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">FinanceFlow</h3>
-                    <p className="text-sm text-gray-400">Fintech Dashboard</p>
+                    <h3 className="text-2xl font-bold mb-2">Freterium Supply Chain Platform</h3>
+                    <p className="text-sm text-gray-400">Supply Chain</p>
                   </div>
                   <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                    UI Designer
+                    Front-end Engineer & UX Designer
                   </span>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Designing a complex financial dashboard that simplifies data visualization and transaction management for users.
+                  Led the redesign of a cloud-based supply chain platform's interface, improving overall performance and UX by 25%. The project involved reimagining complex logistics workflows while ensuring technical feasibility through direct front-end implementation.
                 </p>
                 <Link 
-                  to="/case-study/financeflow" 
+                  to="/case-study/freterium" 
                   className="inline-flex items-center text-accent hover:underline"
                 >
                   View case study <ArrowRight size={16} className="ml-2" />
@@ -161,7 +160,7 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Project 4: CyberShield */}
+            {/* Project 4: Keep existing */}
             <div className="card-project">
               <div className="relative overflow-hidden">
                 <img 
@@ -210,7 +209,11 @@ const Index = () => {
                 Turning complex problems into elegant, user-friendly solutions
               </h2>
               <p className="text-gray-300 mb-8">
-                With over 5 years of experience in product design, I specialize in creating intuitive digital experiences that balance business goals with user needs. My approach combines strategic thinking with meticulous attention to detail.
+                My approach merges analytical thinking with creative problem-solving to transform complex challenges into user-friendly experiences. Whether conducting user interviews, crafting wireframes, or implementing front-end code, I focus on creating products that are both beautiful and functional.
+              </p>
+              
+              <p className="text-gray-300 mb-8">
+                With experience across healthcare, fintech, and supply chain industries, I bring a versatile perspective that balances business objectives with genuine user needs.
               </p>
               
               <div className="space-y-4 mb-8">

@@ -3,98 +3,96 @@ import { ProjectsDataRecord } from "@/types/project";
 
 // Define project data (normally this would come from an API or CMS)
 export const projectsData: ProjectsDataRecord = {
-  kwiks: {
-    title: "KWIKS",
-    subtitle: "A Glovo for recruiters and talent seekers",
-    category: "SaaS Recruitment Platform",
-    client: "KWIKS",
-    duration: "3 Months",
-    role: "Lead Product Designer",
-    image: "public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png",
-    overview: "The KWIKS team set out to reinvent how companies hire talent by creating a recruitment marketplace that connects businesses with specialized headhunters and freelance recruiters around the world. They partnered with us to build their platform from the ground up—focusing on a complete user journey, AI-powered hiring tools, and a more transparent recruiter experience.",
-    mission: "The previous version was unstable and slow, leading to frequent crashes and a frustrating user experience for customers. Additionally, the team struggled to implement new features due to the platform's outdated infrastructure. This made the project critical, necessitating a redesign within the shortest possible timeframe to stabilize the platform, enhance user satisfaction, and enable future scalability.",
-    opportunity: "Hiring is often slow, expensive, and frustrating—especially for growing businesses that need to rapidly build teams but don't have access to trusted recruitment resources. The KWIKS platform aims to solve this by connecting companies with vetted, specialized recruiters through a seamless digital experience.",
-    researchData: [
-      "Evaluated detailed Excel datasets from Operations and Management teams",
-      "Extracted actionable patterns from quantitative user behavior metrics",
-      "Identified critical pain points revealed through structured user analysis",
-      "Translated complex operational feedback into clear user requirements",
-      "Prioritized improvements based on data-supported impact assessments",
-      "Delivered evidence-based recommendations that enhanced platform usability"
-    ],
-    valueProps: [
-      "AI-powered recruiter matching tailored to each hiring mission",
-      "Transparent commissions and upfront collaboration terms",
-      "Real-time mission tracking with simplified workflows",
-      "Global network of independent headhunters, all in one platform"
-    ],
-    results: "By the end of the project, we redesigned the full platform experience, restructured the sitemap, and delivered an entirely new visual identity—touching everything from the product UI and prototyping to the investor pitch deck and developer handoff.",
-    testimonial: {
-      quote: "I had the pleasure of working with Youssef on the new version of the KWIKS app, where he was in charge of creating the new UX/UI environment. Youssef did an outstanding job, consistently delivering high-quality work and respecting all the deadlines set for him.",
-      author: "Karim Rassaoui",
-      title: "Co-founder and CPO @KWIKS"
-    },
-    nextProject: "healthconnect"
-  },
-  healthconnect: {
-    title: "HealthConnect",
-    subtitle: "Simplified healthcare access for everyone",
-    category: "Healthcare Mobile App",
+  telehealth: {
+    title: "Telehealth Solution with Hologram Technology",
+    subtitle: "Improving healthcare accessibility in rural areas",
+    category: "Healthcare",
     client: "MediTech Solutions",
     duration: "4 Months",
-    role: "UX Researcher & UI Designer",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    overview: "MediTech Solutions aimed to revolutionize how patients access healthcare services through a mobile-first approach, making appointment scheduling, medication management, and provider communication seamless and accessible.",
-    mission: "The market was flooded with complicated healthcare apps that confused elderly users and those with limited tech experience. Our mission was to create an intuitive, accessible interface that anyone could use, regardless of their technical proficiency.",
-    opportunity: "By simplifying the healthcare experience, we could improve medication adherence, reduce missed appointments, and create better health outcomes through improved patient-provider communication.",
-    results: "The app launched with a 96% user satisfaction rate and reduced appointment no-shows by 42% in partner clinics within the first three months of deployment.",
+    role: "UX Designer & Researcher",
+    image: "public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png",
+    overview: "Designed an innovative mobile solution to address healthcare accessibility challenges in rural areas. The project incorporated hologram technology to enable remote consultations with specialists, significantly reducing travel time for patients with limited mobility.",
+    mission: "Rural communities have limited access to specialized healthcare, forcing patients to travel long distances for consultations. Our mission was to leverage emerging technologies to bring specialist care directly to patients, regardless of their location.",
+    opportunity: "By combining mobile technology with holographic interfaces, we could create an immersive telehealth experience that maintains the human connection while eliminating geographical barriers to healthcare access.",
+    results: "The platform reduced average patient travel times by 78% and increased specialist consultation access by 45% in pilot communities. User satisfaction scores reached 92% among both patients and healthcare providers.",
     valueProps: [
-      "One-tap appointment scheduling and reminders",
-      "Secure messaging with healthcare providers",
-      "Medication tracking with customizable reminders",
-      "Integrated telehealth capabilities"
+      "Holographic consultation environment for immersive patient-doctor interaction",
+      "Simplified appointment scheduling with automated reminders",
+      "Integrated medical history and prescription system",
+      "Accessibility features for elderly and disabled users"
     ],
     researchData: [
-      "Conducted interviews with 45 patients across diverse demographics",
-      "Analyzed usage patterns of competing healthcare applications",
-      "Performed usability testing with focus on elderly participants",
-      "Created user journey maps highlighting key pain points"
+      "Conducted field studies in 5 rural communities to understand healthcare access barriers",
+      "Interviewed 28 patients and 15 healthcare providers about telehealth preferences",
+      "Analyzed transportation limitations affecting healthcare access",
+      "Tested hologram technology acceptance across different demographics"
     ],
     testimonial: {
-      quote: "Working with Alex transformed our vision into a reality. The intuitive design has made healthcare accessible to our patients who previously struggled with technology.",
-      author: "Dr. Emily Chen",
-      title: "Chief Medical Officer, MediTech Solutions"
+      quote: "The holographic consultation feature transformed how we deliver specialized care to rural patients. For the first time, we can provide a truly immersive clinical experience without requiring vulnerable patients to travel.",
+      author: "Dr. Maria Santos",
+      title: "Chief of Telemedicine, Regional Health Network"
     },
-    nextProject: "financeflow"
+    nextProject: "reporting"
   },
-  financeflow: {
-    title: "FinanceFlow",
-    subtitle: "Simplifying complex financial data",
-    category: "Fintech Dashboard",
-    client: "NextGen Financial",
-    duration: "2 Months",
-    role: "UI Designer",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    overview: "NextGen Financial needed to transform their complex financial dashboard into an intuitive interface that both financial experts and everyday users could navigate with ease.",
-    mission: "Users were overwhelmed by data-heavy screens that required financial expertise to interpret. Our challenge was to present complex financial information in a visually digestible way that empowered rather than confused users.",
-    opportunity: "By redesigning the dashboard with intuitive data visualization and clear user flows, we could help users make better financial decisions and increase platform engagement.",
-    results: "After redesign, user time-on-platform increased by 37% and task completion rates improved by 28%, with financial advisors reporting higher client satisfaction.",
+  reporting: {
+    title: "Reporting Module Optimization",
+    subtitle: "Transforming data complexity into clarity",
+    category: "Enterprise Software",
+    client: "DataViz Enterprise",
+    duration: "3 Months",
+    role: "UX Researcher & Analyst",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    overview: "Transformed a complex, inefficient reporting system into an intuitive tool that reduced task completion time by 40%. Through extensive user research and workflow analysis, I identified and eliminated key pain points while enhancing data visualization capabilities.",
+    mission: "The existing reporting system was causing significant productivity losses, with users spending excessive time creating basic reports. The system's complexity led to errors and incomplete data analysis, affecting business decision-making.",
+    opportunity: "By reimagining the reporting workflow from the ground up, we could create an intuitive system that empowers users to quickly generate accurate, insightful reports without requiring advanced technical knowledge.",
+    results: "After implementation, users completed reporting tasks 40% faster with a 65% reduction in support tickets related to reporting functions. Data accuracy improved by 28%, and the organization saw enhanced decision-making capabilities.",
     valueProps: [
-      "AI-powered financial insights in plain language",
-      "Customizable dashboard with drag-and-drop widgets",
-      "Predictive spending and saving visualizations",
-      "One-click financial report generation"
+      "Simplified report generation process with guided workflows",
+      "Dynamic data visualization options tailored to different user needs",
+      "One-click report sharing and collaboration features",
+      "Customizable dashboard with real-time data integration"
     ],
     researchData: [
-      "Conducted competitive analysis of leading fintech interfaces",
-      "Performed card sorting exercises to optimize information architecture",
-      "Analyzed heat maps of user interactions with the existing platform",
-      "Tested various data visualization approaches with target users"
+      "Conducted task analysis with 18 different user roles",
+      "Created journey maps highlighting 5 critical pain points in the reporting process",
+      "Analyzed 300+ support tickets to identify common user struggles",
+      "Performed comparative usability testing against industry-standard reporting tools"
     ],
     testimonial: {
-      quote: "Alex took our data-heavy platform and transformed it into something beautiful yet functional. Our clients now understand their finances at a glance.",
-      author: "Michael Finch",
-      title: "Product Lead, NextGen Financial"
+      quote: "What previously took our team days now takes hours. The redesigned reporting module has transformed how we analyze performance data and share insights across departments.",
+      author: "Jessica Chen",
+      title: "Operations Director, DataViz Enterprise"
+    },
+    nextProject: "freterium"
+  },
+  freterium: {
+    title: "Freterium Supply Chain Platform",
+    subtitle: "Reimagining logistics workflow management",
+    category: "Supply Chain",
+    client: "Freterium",
+    duration: "10 Months",
+    role: "Front-end Engineer & UX Designer",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    overview: "Led the redesign of a cloud-based supply chain platform's interface, improving overall performance and UX by 25%. The project involved reimagining complex logistics workflows while ensuring technical feasibility through direct front-end implementation.",
+    mission: "Freterium's existing platform was powerful but difficult to navigate, leading to customer frustration and reduced adoption. As logistics operations grew more complex, the interface needed to scale accordingly while remaining intuitive.",
+    opportunity: "By combining UX expertise with front-end implementation skills, we could create a seamless logistics management experience that handles complexity behind the scenes while presenting users with a clean, intuitive interface.",
+    results: "The redesign resulted in a 25% improvement in task completion rates, 40% reduction in onboarding time for new customers, and a significant decrease in support requirements despite increasing platform capabilities.",
+    valueProps: [
+      "Unified dashboard for end-to-end supply chain visibility",
+      "Intelligent workflow automation with exception handling",
+      "Real-time tracking and notifications system",
+      "Collaborative tools for multi-stakeholder logistics coordination"
+    ],
+    researchData: [
+      "Shadowed logistics coordinators to understand daily workflow patterns",
+      "Analyzed user interaction data from the existing platform",
+      "Conducted usability testing with logistics professionals across different company sizes",
+      "Mapped complex supply chain processes to identify optimization opportunities"
+    ],
+    testimonial: {
+      quote: "The redesigned platform has completely transformed how we manage our logistics operations. What used to require multiple systems and constant back-and-forth now flows seamlessly in one intuitive interface.",
+      author: "Mohammed El-Khatib",
+      title: "Supply Chain Director, Global Logistics Co."
     },
     nextProject: "cybershield"
   },
@@ -127,6 +125,6 @@ export const projectsData: ProjectsDataRecord = {
       author: "Sarah Jenkins",
       title: "CEO, SecureTech Inc."
     },
-    nextProject: "kwiks"
+    nextProject: "telehealth"
   }
 };
