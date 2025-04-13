@@ -72,7 +72,11 @@ const Index = () => {
                 'public/clients/8.png',
               ].map((logo, idx) => (
                 <div key={`first-${idx}`} className="logo-item">
-                  <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
+                  <img 
+                    src={logo} 
+                    alt={`Client logo ${idx + 1}`} 
+                    className="w-32 md:w-48 h-auto" // Increased width
+                  />
                 </div>
               ))}
               
@@ -88,7 +92,11 @@ const Index = () => {
                 'public/clients/8.png',
               ].map((logo, idx) => (
                 <div key={`second-${idx}`} className="logo-item">
-                  <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
+                  <img 
+                    src={logo} 
+                    alt={`Client logo ${idx + 1}`} 
+                    className="w-32 md:w-48 h-auto" // Increased width
+                  />
                 </div>
               ))}
             </div>
