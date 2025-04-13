@@ -1,13 +1,293 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <NavBar />
+      
+      {/* Hero Section */}
+      <section className="grid-background min-h-screen flex items-center pt-24 pb-16">
+        <div className="container mx-auto px-4 md:px-8 text-center">
+          <div className="flex justify-center mb-3">
+            <div className="flex space-x-1">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="w-8 h-8 rounded-full overflow-hidden">
+                  <img 
+                    src={`https://randomuser.me/api/portraits/men/${i + 10}.jpg`} 
+                    alt="Client avatar" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="ml-3 text-sm text-gray-400">Trusted by 10+ clients</p>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight max-w-4xl mx-auto">
+            Crafting Delightful Digital Experiences
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            I'm Alex Morgan, a versatile product designer with 5+ years of crafting intuitive digital experiences across multiple industries.
+          </p>
+          
+          <Link to="/contact" className="btn-primary text-lg">
+            Book a free 30-min call
+          </Link>
+        </div>
+      </section>
+      
+      {/* Clients/Partners Section */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-4 md:px-8">
+          <h2 className="sr-only">Trusted Clients</h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+            {[
+              'public/lovable-uploads/70bde27d-0e12-4d2b-86bb-f940e952e85c.png',
+              'public/lovable-uploads/80b4effd-6b6b-46ba-9ec0-50d71b62bcd0.png',
+              'public/lovable-uploads/b089eca0-1fda-4d58-9e17-778885e796cf.png',
+              'public/lovable-uploads/e1467485-238d-419b-a09e-bd6cb4fa5688.png',
+              'public/lovable-uploads/ae9fda9a-a285-40e8-8113-11c4ff9f4c1b.png',
+            ].map((logo, idx) => (
+              <div key={idx} className="opacity-50 hover:opacity-100 transition-opacity duration-300 w-24 md:w-36">
+                <img src={logo} alt={`Client logo ${idx + 1}`} className="w-full" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Selected Works Section */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Selected Works</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Project 1: KWIKS */}
+            <div className="card-project">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png" 
+                  alt="KWIKS Project" 
+                  className="w-full h-64 object-cover object-top transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">KWIKS</h3>
+                    <p className="text-sm text-gray-400">SaaS Recruitment Platform</p>
+                  </div>
+                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                    Lead Product Designer
+                  </span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Redesigning their platform's UI/UX and integrating AI features to enhance user experience and streamline recruitment.
+                </p>
+                <Link 
+                  to="/case-study/kwiks" 
+                  className="inline-flex items-center text-accent hover:underline"
+                >
+                  View case study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Project 2: HealthConnect */}
+            <div className="card-project">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                  alt="HealthConnect Project" 
+                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">HealthConnect</h3>
+                    <p className="text-sm text-gray-400">Healthcare Mobile App</p>
+                  </div>
+                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                    UX Researcher & UI Designer
+                  </span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Creating an intuitive interface for patients to manage appointments, medications, and communicate with healthcare providers.
+                </p>
+                <Link 
+                  to="/case-study/healthconnect" 
+                  className="inline-flex items-center text-accent hover:underline"
+                >
+                  View case study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Project 3: FinanceFlow */}
+            <div className="card-project">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                  alt="FinanceFlow Project" 
+                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">FinanceFlow</h3>
+                    <p className="text-sm text-gray-400">Fintech Dashboard</p>
+                  </div>
+                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                    UI Designer
+                  </span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Designing a complex financial dashboard that simplifies data visualization and transaction management for users.
+                </p>
+                <Link 
+                  to="/case-study/financeflow" 
+                  className="inline-flex items-center text-accent hover:underline"
+                >
+                  View case study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Project 4: CyberShield */}
+            <div className="card-project">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                  alt="CyberShield Project" 
+                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">CyberShield</h3>
+                    <p className="text-sm text-gray-400">Cyber Security Platform</p>
+                  </div>
+                  <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                    Product Designer
+                  </span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Reimagining the user experience for a complex cyber security solution, making it accessible to non-technical users.
+                </p>
+                <Link 
+                  to="/case-study/cybershield" 
+                  className="inline-flex items-center text-accent hover:underline"
+                >
+                  View case study <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link to="/work" className="btn-primary">
+              View all projects
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* About Me Snapshot */}
+      <section className="py-24 bg-gray-950">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Turning complex problems into elegant, user-friendly solutions
+              </h2>
+              <p className="text-gray-300 mb-8">
+                With over 5 years of experience in product design, I specialize in creating intuitive digital experiences that balance business goals with user needs. My approach combines strategic thinking with meticulous attention to detail.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m12 18 7-7-7-7"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">User-Centered Design</h3>
+                    <p className="text-gray-400">I put users at the heart of every design decision, creating experiences that are intuitive and delightful.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m14.5 9-5 5"/><path d="m9.5 9 5 5"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">Research-Driven Approach</h3>
+                    <p className="text-gray-400">I base design decisions on solid research and data, ensuring solutions that address real user needs.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">Collaborative Process</h3>
+                    <p className="text-gray-400">I work closely with developers, stakeholders, and users to ensure effective communication and alignment.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <Link to="/about" className="inline-flex items-center text-accent hover:underline">
+                Learn more about my approach <ArrowRight size={16} className="ml-2" />
+              </Link>
+            </div>
+            
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" 
+                  alt="Alex Morgan" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-black p-4 rounded-lg shadow-xl">
+                <p className="text-sm text-gray-400 mb-1">Experience</p>
+                <p className="text-xl font-bold">5+ Years</p>
+              </div>
+              <div className="absolute -top-6 -right-6 bg-black p-4 rounded-lg shadow-xl">
+                <p className="text-sm text-gray-400 mb-1">Projects</p>
+                <p className="text-xl font-bold">30+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Call to Action Section */}
+      <section className="py-24 grid-background">
+        <div className="container mx-auto px-4 md:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 max-w-2xl mx-auto">
+            Let's talk about your project in person
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            If you have any questions or need further details, I'm here to help.
+          </p>
+          <Link to="/contact" className="btn-primary text-lg">
+            Book a free 30-min call
+          </Link>
+        </div>
+      </section>
+      
+      <Footer />
+    </>
   );
 };
 
