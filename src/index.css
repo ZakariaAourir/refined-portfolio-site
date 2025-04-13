@@ -149,15 +149,15 @@
     @apply bg-black bg-grid-pattern;
   }
   
-  /* Logo Scroll Animation - Improved for continuous effect */
   .logos-scroll-container {
     @apply w-full overflow-hidden relative;
   }
   
   .logos-scroll {
     @apply flex items-center;
-    animation: scroll 50s linear infinite;
-    /* Increased animation duration for slower, more comfortable scrolling */
+    animation: scroll 40s linear infinite;
+    /* Important: width needs to be calculated based on all items */
+    width: calc(200% + 80px); /* Adjust this value based on actual content width */
   }
   
   .logos-scroll:hover {
@@ -165,8 +165,9 @@
   }
   
   .logo-item {
-    @apply inline-flex justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 mx-4;
-    /* Reduced margin for better spacing */
+    @apply inline-flex justify-center opacity-80 hover:opacity-100 transition-opacity duration-300;
+    padding: 0 20px; /* Creates 40px gap between logos as requested */
+    /* Removed mx-4 which was making them small */
   }
   
   @keyframes scroll {
@@ -174,8 +175,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%);
-      /* Animate exactly to the point where the second set begins */
+      transform: translateX(-50%); /* Key change: animate to exactly half */
     }
   }
 }

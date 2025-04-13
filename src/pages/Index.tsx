@@ -20,7 +20,6 @@ const Index = () => {
     'public/clients/4.png',
     'public/clients/5.png',
     'public/clients/6.png',
-    'public/clients/7.png',
     'public/clients/8.png',
   ];
 
@@ -77,7 +76,7 @@ const Index = () => {
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-48 md:w-64 h-auto" 
+                    className="w-66 md:w-90 h-auto" // Increased size
                   />
                 </div>
               ))}
@@ -88,7 +87,7 @@ const Index = () => {
                   <img 
                     src={logo} 
                     alt={`Client logo ${idx + 1}`} 
-                    className="w-48 md:w-64 h-auto" 
+                    className="w-66 md:w-90 h-auto" // Increased size
                   />
                 </div>
               ))}
