@@ -1,11 +1,36 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
+// Define a complete project type with all possible properties
+interface ProjectData {
+  title: string;
+  subtitle?: string;
+  category: string;
+  client: string;
+  duration: string;
+  role: string;
+  image: string;
+  overview?: string;
+  mission?: string;
+  opportunity?: string;
+  researchData?: string[];
+  valueProps?: string[];
+  results?: string;
+  testimonial?: {
+    quote: string;
+    author: string;
+    title: string;
+  };
+  nextProject: string;
+  description?: string;
+}
+
 // Define project data (normally this would come from an API or CMS)
-const projectsData = {
+const projectsData: Record<string, ProjectData> = {
   kwiks: {
     title: "KWIKS",
     subtitle: "A Glovo for recruiters and talent seekers",
@@ -41,32 +66,95 @@ const projectsData = {
   },
   healthconnect: {
     title: "HealthConnect",
+    subtitle: "Simplified healthcare access for everyone",
     category: "Healthcare Mobile App",
     client: "MediTech Solutions",
     duration: "4 Months",
     role: "UX Researcher & UI Designer",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    // ... other fields would be filled in for a real application
+    overview: "MediTech Solutions aimed to revolutionize how patients access healthcare services through a mobile-first approach, making appointment scheduling, medication management, and provider communication seamless and accessible.",
+    mission: "The market was flooded with complicated healthcare apps that confused elderly users and those with limited tech experience. Our mission was to create an intuitive, accessible interface that anyone could use, regardless of their technical proficiency.",
+    opportunity: "By simplifying the healthcare experience, we could improve medication adherence, reduce missed appointments, and create better health outcomes through improved patient-provider communication.",
+    results: "The app launched with a 96% user satisfaction rate and reduced appointment no-shows by 42% in partner clinics within the first three months of deployment.",
+    valueProps: [
+      "One-tap appointment scheduling and reminders",
+      "Secure messaging with healthcare providers",
+      "Medication tracking with customizable reminders",
+      "Integrated telehealth capabilities"
+    ],
+    researchData: [
+      "Conducted interviews with 45 patients across diverse demographics",
+      "Analyzed usage patterns of competing healthcare applications",
+      "Performed usability testing with focus on elderly participants",
+      "Created user journey maps highlighting key pain points"
+    ],
+    testimonial: {
+      quote: "Working with Alex transformed our vision into a reality. The intuitive design has made healthcare accessible to our patients who previously struggled with technology.",
+      author: "Dr. Emily Chen",
+      title: "Chief Medical Officer, MediTech Solutions"
+    },
     nextProject: "financeflow"
   },
   financeflow: {
     title: "FinanceFlow",
+    subtitle: "Simplifying complex financial data",
     category: "Fintech Dashboard",
     client: "NextGen Financial",
     duration: "2 Months",
     role: "UI Designer",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    // ... other fields would be filled in for a real application
+    overview: "NextGen Financial needed to transform their complex financial dashboard into an intuitive interface that both financial experts and everyday users could navigate with ease.",
+    mission: "Users were overwhelmed by data-heavy screens that required financial expertise to interpret. Our challenge was to present complex financial information in a visually digestible way that empowered rather than confused users.",
+    opportunity: "By redesigning the dashboard with intuitive data visualization and clear user flows, we could help users make better financial decisions and increase platform engagement.",
+    results: "After redesign, user time-on-platform increased by 37% and task completion rates improved by 28%, with financial advisors reporting higher client satisfaction.",
+    valueProps: [
+      "AI-powered financial insights in plain language",
+      "Customizable dashboard with drag-and-drop widgets",
+      "Predictive spending and saving visualizations",
+      "One-click financial report generation"
+    ],
+    researchData: [
+      "Conducted competitive analysis of leading fintech interfaces",
+      "Performed card sorting exercises to optimize information architecture",
+      "Analyzed heat maps of user interactions with the existing platform",
+      "Tested various data visualization approaches with target users"
+    ],
+    testimonial: {
+      quote: "Alex took our data-heavy platform and transformed it into something beautiful yet functional. Our clients now understand their finances at a glance.",
+      author: "Michael Finch",
+      title: "Product Lead, NextGen Financial"
+    },
     nextProject: "cybershield"
   },
   cybershield: {
     title: "CyberShield",
+    subtitle: "Making cybersecurity accessible",
     category: "Cyber Security Platform",
     client: "SecureTech Inc.",
     duration: "3 Months",
     role: "Product Designer",
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    // ... other fields would be filled in for a real application
+    overview: "SecureTech Inc. wanted to demystify cybersecurity for small businesses and non-technical users by creating an intuitive platform that simplified threat detection and protection.",
+    mission: "Cybersecurity tools have traditionally been designed for IT professionals, leaving small businesses vulnerable. Our mission was to create an interface that translated complex security concepts into actionable insights for non-technical users.",
+    opportunity: "By making cybersecurity accessible to everyone, we could help protect more small businesses from increasingly sophisticated cyber threats and data breaches.",
+    results: "The redesigned platform saw a 65% increase in user adoption and helped prevent over 1,200 potential security breaches for small business customers within the first year.",
+    valueProps: [
+      "Real-time threat visualization in non-technical language",
+      "One-click security improvements based on personalized recommendations",
+      "Automated vulnerability scanning with visual results",
+      "Security health score with actionable improvement steps"
+    ],
+    researchData: [
+      "Interviewed small business owners about their cybersecurity concerns",
+      "Analyzed key user friction points in existing security tools",
+      "Tested security visualization concepts with non-technical users",
+      "Conducted comparative usability testing against leading products"
+    ],
+    testimonial: {
+      quote: "Alex translated our complex security technology into a user experience that even my least technical clients can understand and use effectively.",
+      author: "Sarah Jenkins",
+      title: "CEO, SecureTech Inc."
+    },
     nextProject: "kwiks"
   }
 };
