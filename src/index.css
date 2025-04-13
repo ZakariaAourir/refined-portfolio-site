@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -149,7 +148,6 @@
     @apply bg-black bg-grid-pattern;
   }
   
-  /* Logo Scroll Animation */
   .logos-scroll-container {
     @apply w-full overflow-hidden relative;
   }
@@ -164,7 +162,7 @@
   }
   
   .logo-item {
-    @apply inline-flex justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 w-24 md:w-36 mx-8;
+    @apply inline-flex justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 w-48 md:w-64 lg:w-80 mx-12;
   }
   
   @keyframes scroll {
