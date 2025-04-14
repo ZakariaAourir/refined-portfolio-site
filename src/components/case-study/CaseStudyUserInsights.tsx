@@ -10,11 +10,25 @@ interface CaseStudyUserInsightsProps {
 const CaseStudyUserInsights: React.FC<CaseStudyUserInsightsProps> = ({ project }) => {
   if (!project.userInsights || project.userInsights.length === 0) return null;
   
+  // Determine section title based on project category
+  const getSectionTitle = () => {
+    const category = project.category.toLowerCase();
+    if (category.includes('research') || category.includes('industrial')) {
+      return "STAKEHOLDER VOICES";
+    } else if (category.includes('healthcare')) {
+      return "PATIENT STORIES";
+    } else if (category.includes('fintech')) {
+      return "USER TESTIMONIALS";
+    } else {
+      return "USER INSIGHTS";
+    }
+  };
+  
   return (
     <section className="py-16 bg-gray-950">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-10">
-          <p className="text-sm text-accent mb-2">USER INSIGHTS</p>
+          <p className="text-sm text-accent mb-2">{getSectionTitle()}</p>
           <h2 className="text-3xl font-bold">Voice of the Users</h2>
         </div>
         

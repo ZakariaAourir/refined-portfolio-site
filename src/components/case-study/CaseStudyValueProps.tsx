@@ -10,11 +10,27 @@ interface CaseStudyValuePropsProps {
 const CaseStudyValueProps: React.FC<CaseStudyValuePropsProps> = ({ project }) => {
   if (!project.valueProps || project.valueProps.length === 0) return null;
   
+  // Determine section title based on project category
+  const getSectionTitle = () => {
+    const category = project.category.toLowerCase();
+    if (category.includes('research') || category.includes('industrial')) {
+      return "SOLUTION CRITERIA";
+    } else if (category.includes('visual') || category.includes('icon')) {
+      return "DESIGN PRINCIPLES";
+    } else if (category.includes('healthcare')) {
+      return "CARE INNOVATIONS";
+    } else if (category.includes('fintech')) {
+      return "PLATFORM ADVANTAGES";
+    } else {
+      return "VALUE PROPOSITION";
+    }
+  };
+  
   return (
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-10">
-          <p className="text-sm text-accent mb-2">VALUE PROPOSITION</p>
+          <p className="text-sm text-accent mb-2">{getSectionTitle()}</p>
           <h2 className="text-3xl font-bold">Key Benefits</h2>
         </div>
         

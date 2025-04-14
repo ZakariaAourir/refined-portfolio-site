@@ -9,14 +9,36 @@ interface CaseStudyOverviewProps {
 const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ project }) => {
   if (!project.overview) return null;
   
+  // Determine section title based on project category
+  const getSectionTitle = () => {
+    const category = project.category.toLowerCase();
+    if (category.includes('research') || category.includes('industrial')) {
+      return "PROJECT CONTEXT";
+    } else if (category.includes('visual') || category.includes('icon')) {
+      return "VISUAL CHALLENGE";
+    } else if (category.includes('healthcare')) {
+      return "HEALTHCARE CHALLENGE";
+    } else if (category.includes('fintech')) {
+      return "FINANCIAL SOLUTION";
+    } else {
+      return "COMPANY OVERVIEW";
+    }
+  };
+  
   return (
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div>
             <div className="sticky top-32">
-              <p className="text-sm text-accent mb-2">01 | COMPANY OVERVIEW</p>
-              <h2 className="text-3xl font-bold mb-6">A Glovo for recruiters and talent seekers</h2>
+              <p className="text-sm text-accent mb-2">01 | {getSectionTitle()}</p>
+              <h2 className="text-3xl font-bold mb-6">
+                {project.category.includes('Fintech') ? "Reimagining financial access" : 
+                 project.category.includes('Healthcare') ? "Expanding healthcare reach" : 
+                 project.category.includes('Visual') ? "Creating visual language" : 
+                 project.category.includes('Management') ? "Streamlining workflows" : 
+                 "A Glovo for recruiters and talent seekers"}
+              </h2>
             </div>
           </div>
           
@@ -32,7 +54,13 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ project }) => {
                 TLDR
               </h3>
               <p className="text-gray-400">
-                The goal was to simplify and speed up recruitment for businesses by providing access to top independent recruiters, all through a smart, intuitive platform that helps companies hire better, faster.
+                The goal was to {
+                  project.category.includes('Fintech') ? "create an accessible financial platform for students using cultural lending practices" :
+                  project.category.includes('Healthcare') ? "bring specialized medical care to underserved rural communities through technology" :
+                  project.category.includes('Visual') ? "translate complex scientific concepts into a cohesive visual language" :
+                  project.category.includes('Management') ? "simplify document management for construction teams through user-centered design" :
+                  "simplify and speed up recruitment for businesses by providing access to top independent recruiters, all through a smart, intuitive platform that helps companies hire better, faster."
+                }
               </p>
             </div>
             

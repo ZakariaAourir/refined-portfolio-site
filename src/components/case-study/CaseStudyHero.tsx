@@ -9,6 +9,17 @@ interface CaseStudyHeroProps {
 }
 
 const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ project }) => {
+  // Format category display based on project type
+  const formatCategoryLabel = () => {
+    if (project.category.includes('Management')) {
+      return "Solution Type";
+    } else if (project.category.includes('Visual')) {
+      return "Design Type";
+    } else {
+      return "Project Type";
+    }
+  };
+  
   return (
     <section className="pt-28 pb-16 bg-black">
       <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +48,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ project }) => {
                 <p className="font-medium">{project.role}</p>
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">Project Type</p>
+                <p className="text-sm text-gray-400 mb-1">{formatCategoryLabel()}</p>
                 <p className="font-medium">{project.category}</p>
               </div>
             </div>
