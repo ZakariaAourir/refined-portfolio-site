@@ -24,8 +24,20 @@ export interface ProjectData {
   };
   reflection?: string;
   reflectionPoints?: string[];
-  nextProject: string;
+  nextProject?: string;
   description?: string;
+  uiDesign?: string;
+  uiScreenshots?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  }[];
+  interviewFindings?: string[];
+  uiResearch?: string;
+  userInsights?: {
+    quote: string;
+    persona: string;
+  }[]
 }
 
 export type ProjectsDataRecord = Record<string, ProjectData>;

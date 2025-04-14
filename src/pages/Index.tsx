@@ -50,11 +50,10 @@ const Index = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-6xl mx-auto">
-            👋 I'm Zakaria, a UX Designer and Front-end Developer with 5+ years of experience creating intuitive, accessible digital experiences. I specialize in combining thorough user research with technical implementation skills to deliver meaningful solutions.
-            <br /><br />
-            My approach merges analytical thinking with creative problem-solving to transform complex challenges into user-friendly experiences. Whether conducting user interviews, crafting wireframes, or implementing front-end code, I focus on creating products that are both beautiful and functional.
-            <br /><br />
-            With experience across healthcare, fintech, and supply chain industries, I bring a versatile perspective that balances business objectives with genuine user needs.
+            👋 I'm Zakaria, a UX designer focused on creating intuitive, accessible digital experiences through user-centered 
+methodologies and 5+ years of front-end development expertise. Specializes in combining user 
+research, interactive prototyping, and technical implementation to deliver solutions that enhance 
+performance and meet business objectives.
           </p>
           
           <Link to="/contact" className="btn-primary text-lg">
