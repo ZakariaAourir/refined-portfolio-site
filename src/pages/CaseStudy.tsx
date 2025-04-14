@@ -13,6 +13,11 @@ import CaseStudyResults from '@/components/case-study/CaseStudyResults';
 import CaseStudyReflection from '@/components/case-study/CaseStudyReflection';
 import CaseStudyNextProject from '@/components/case-study/CaseStudyNextProject';
 import CaseStudyNotFound from '@/components/case-study/CaseStudyNotFound';
+import CaseStudyUIDesign from '@/components/case-study/CaseStudyUIDesign';
+import CaseStudyUIScreenshots from '@/components/case-study/CaseStudyUIScreenshots';
+import CaseStudyValueProps from '@/components/case-study/CaseStudyValueProps';
+import CaseStudyInterviewFindings from '@/components/case-study/CaseStudyInterviewFindings';
+import CaseStudyUserInsights from '@/components/case-study/CaseStudyUserInsights';
 import { projectsData } from '@/data/projectsData';
 
 const CaseStudy = () => {
@@ -34,8 +39,26 @@ const CaseStudy = () => {
       <CaseStudyOverview project={project} />
       <CaseStudyMission project={project} />
       <CaseStudyOpportunity project={project} />
+      
+      {/* Conditionally render value props section */}
+      <CaseStudyValueProps project={project} />
+      
       <CaseStudyResearch project={project} />
+      
+      {/* Conditionally render interview findings */}
+      <CaseStudyInterviewFindings project={project} />
+      
+      {/* Conditionally render user insights */}
+      <CaseStudyUserInsights project={project} />
+      
       <CaseStudyDesignProcess project={project} />
+      
+      {/* Conditionally render UI design section */}
+      <CaseStudyUIDesign project={project} />
+      
+      {/* Conditionally render UI screenshots */}
+      <CaseStudyUIScreenshots project={project} />
+      
       <CaseStudyResults project={project} />
       <CaseStudyReflection project={project} />
       
