@@ -41,7 +41,7 @@ const CaseStudyOpportunity: React.FC<CaseStudyOpportunityProps> = ({ project }) 
   };
   
   return (
-    <section className="py-16 bg-black">
+    <section className="py-12 bg-black">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div>
@@ -55,7 +55,7 @@ const CaseStudyOpportunity: React.FC<CaseStudyOpportunityProps> = ({ project }) 
             <p className="text-lg text-gray-300 mb-8">{project.opportunity}</p>
             
             {/* Value Proposition Box */}
-            {project.valueProps && (
+            {/* {project.valueProps && (
               <div className="bg-gray-900 rounded-xl p-6 mb-8">
                 <h3 className="text-lg font-semibold mb-4 flex items-center">
                   <span className="inline-block w-6 h-6 rounded-full bg-accent/20 text-accent text-sm flex items-center justify-center mr-2">
@@ -72,16 +72,20 @@ const CaseStudyOpportunity: React.FC<CaseStudyOpportunityProps> = ({ project }) 
                   ))}
                 </ul>
               </div>
-            )}
+            )} */}
             
             {/* UI mockups */}
-            <div className="space-y-6">
-              <img 
-                src="public/lovable-uploads/70bde27d-0e12-4d2b-86bb-f940e952e85c.png" 
-                alt="KWIKS UI Mockup" 
-                className="w-full rounded-xl"
-              />
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+            {project.opportunityImages && project.opportunityImages.map((image) => (
+              <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
+                <img 
+                  src={image} 
+                  alt="Overview" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </div>

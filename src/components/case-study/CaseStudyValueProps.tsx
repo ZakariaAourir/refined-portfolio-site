@@ -27,7 +27,7 @@ const CaseStudyValueProps: React.FC<CaseStudyValuePropsProps> = ({ project }) =>
   };
   
   return (
-    <section className="py-16 bg-black">
+    <section className="py-12 bg-black">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-10">
           <p className="text-sm text-accent mb-2">{getSectionTitle()}</p>

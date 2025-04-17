@@ -58,7 +58,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ project }) => {
             <img 
               src={project.image} 
               alt={project.title} 
-              className="w-full h-full object-none"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

@@ -53,7 +53,7 @@ const CaseStudyResearch: React.FC<CaseStudyResearchProps> = ({ project }) => {
             <p className="text-lg text-gray-300 mb-8">
               {project.category.includes('Management') ? 
                 "Through systematic user interviews and direct observation:" : 
-                "Through systematic analysis of operations data received from KWIKS management:"}
+                "Through systematic analysis of operations data:"}
             </p>
             
             <ul className="space-y-3 mb-8">

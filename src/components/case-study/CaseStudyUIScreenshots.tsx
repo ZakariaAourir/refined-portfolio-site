@@ -51,7 +51,7 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
                 <img 
                   src={screenshot.image} 
                   alt={screenshot.title || `UI Screenshot ${index + 1}`} 
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-contain py-2"
                 />
               )}
               <div className="p-6">

@@ -21,6 +21,7 @@ export interface ProjectData {
     quote: string;
     author: string;
     title: string;
+    image?: string;
   };
   reflection?: string;
   reflectionPoints?: string[];
@@ -37,7 +38,10 @@ export interface ProjectData {
   userInsights?: {
     quote: string;
     persona: string;
-  }[]
+  }[];
+  overViewImages?: string[];
+  financialMission?: string[];
+  opportunityImages?: string[];
 }
 
 export type ProjectsDataRecord = Record<string, ProjectData>;

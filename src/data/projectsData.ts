@@ -8,6 +8,8 @@ export const projectsData: ProjectsDataRecord = {
     subtitle: "Redesigning Traditional African Lending for the Digital Student",
     category: "Fintech / Education",
     client: "FinEd Innovations",
+    overViewImages: [ "/tontina/imagining-financial.png"],
+    financialMission: ["/tontina/before-state.png", "/tontina/pain.png"],
     duration: "3 Months",
     role: "UX Research Lead & Design Strategy",
     tools: ["Figma", "Instagram", "User Interviews", "Questionnaires", "Heuristic Evaluation", "Journey Mapping"],
@@ -42,7 +44,8 @@ export const projectsData: ProjectsDataRecord = {
     testimonial: {
       quote: "The timeline visualization makes it so much easier to understand when I'll receive my payout and what my obligations are.",
       author: "Emma",
-      title: "20, Business Administration Student"
+      title: "20, Business Administration Student",
+      image: "/tontina/emma.jpg"
     },
     reflection: "This project reinforced the critical importance of thorough user research in creating financial products that meet specific audience needs. The most impactful aspect of my design work was focusing on transparency and trust features, which proved to be non-negotiable elements in peer-to-peer financial systems.",
     reflectionPoints: [
@@ -55,29 +58,24 @@ export const projectsData: ProjectsDataRecord = {
     nextProject: "telehealth",
     uiScreenshots: [
       {
-        title: "Dashboard",
-        description: "Main dashboard showing active tontines, upcoming payments, and quick action buttons",
-        image: "[INSERT DASHBOARD UI IMAGE URL]"
+        title: "Homepage",
+        description: "Main homepage to create or find tontines, newsfeed, and quick some stats for the ongoing tontines",
+        image: "/tontina/tontine1.png"
       },
       {
-        title: "Tontine Discovery",
-        description: "Interface for finding and joining tontines with filters and trust indicators",
-        image: "[INSERT DISCOVERY UI IMAGE URL]"
+        title: "Tontine Initialization",
+        description: "Interfaces for creating a totnine, by choosing the cycle, contribution prices and relevace by city, univercity or friends",
+        image: "/tontina/cycle.png"
       },
       {
-        title: "Payment Timeline",
-        description: "Interactive visualization showing payment schedule and current status",
-        image: "[INSERT TIMELINE UI IMAGE URL]"
+        title: "Payment Initialization",
+        description: "Interactive visualization showing the selected tontine, making a first payment to validate the tontine.",
+        image: "/tontina/depo.png"
       },
       {
-        title: "Contract Signing",
-        description: "Simplified contract presentation with key points highlighted",
-        image: "[INSERT CONTRACT UI IMAGE URL]"
-      },
-      {
-        title: "User Profile",
-        description: "Profile screen showing participation history and trust rating",
-        image: "[INSERT PROFILE UI IMAGE URL]"
+        title: "Tontine Dashboard",
+        description: "Interactive visualization showing the the active tontine, payments timelines, and payouts.",
+        image: "/tontina/dash.png"
       }
     ]
   },
@@ -90,7 +88,7 @@ export const projectsData: ProjectsDataRecord = {
     duration: "4 Months",
     role: "UX Designer & Researcher, Workshop Facilitator",
     tools: ["Workshop Facilitation", "Journey Mapping", "Figma", "User Testing", "Information Architecture", "Wireframing", "Prototyping", "Card Sorting"],
-    image: "public/lovable-uploads/2de23b23-f375-4498-8d10-cae73146064d.png",
+    image: "/telehealth/pres.png",
     overview: "I designed a hologram-paired mobile application for a healthcare startup operating in rural communities where access to specialized medical care is limited. Through a structured workshop approach, I created a holographic telehealth platform that enables rural residents to access specialized healthcare services remotely through interactive 3D consultations, medical result visualizations, and medication guidance.",
     mission: "Rural areas face significant challenges in accessing healthcare, particularly specialized services. Limited availability of healthcare professionals, inadequate infrastructure, and long distances to medical facilities contribute to delays in diagnosis, treatment, and follow-up care. My mission was to leverage hologram technology to bring specialized healthcare directly to rural patients, addressing the geographical barriers that lead to poorer health outcomes in these regions.",
     opportunity: "By combining mobile technology with holographic interfaces, I identified an opportunity to create an immersive telehealth experience that maintains the human connection of in-person consultations while eliminating geographical barriers. This approach could transform healthcare delivery in underserved areas through specialized consultations, enhanced medical visualization, and improved treatment adherence.",
@@ -169,7 +167,7 @@ export const projectsData: ProjectsDataRecord = {
     duration: "6 Weeks",
     role: "Visual Designer & Workshop Facilitator",
     tools: ["Workshop Facilitation", "Adobe Illustrator", "Figma", "User Testing", "Style Guide Creation", "Grid Systems"],
-    image: "public/lovable-uploads/cloning-lab-cover.png",
+    image: "/iconset/pres.png",
     overview: "I designed a comprehensive icon set that represents key elements of a cloning laboratory in a simple, clear, and visually appealing manner. Through a collaborative workshop approach, I created a cohesive set of 12 scientifically accurate icons that effectively communicate complex laboratory concepts while maintaining simplicity and recognizability across different sizes and applications.",
     mission: "Scientific concepts are often difficult to communicate to broader audiences due to their complexity and specialized terminology. My mission was to transform complex cloning laboratory concepts into an intuitive visual language that could be understood by both scientific and general audiences, bridging the gap between specialized knowledge and broader comprehension.",
     opportunity: "By creating a unified visual language for cloning laboratory concepts, I saw an opportunity to enhance scientific communication, improve user interfaces for laboratory software, and create educational assets that would make complex genetic concepts more accessible. The challenge was balancing scientific accuracy with visual simplicity while ensuring each icon remained distinct and immediately recognizable.",
@@ -248,7 +246,7 @@ export const projectsData: ProjectsDataRecord = {
     duration: "6 Weeks",
     role: "UX Researcher, Information Architect",
     tools: ["User Interviews", "Observation", "Data Analysis", "Information Architecture", "Hypothesis Testing"],
-    image: "public/lovable-uploads/construction-app-cover.png",
+    image: "/reporting/pres.png",
     overview: "I led the UX research phase for the redesign of a critical document management module (GED - Gestion Electronique des Documents) within Beyond InSite, a construction management platform. The module was essential for collaborative report generation but suffered from complexity issues that extended the time required to complete tasks. Through user interviews, direct observation, and rigorous analysis, I identified key pain points and developed actionable insights to streamline the user experience.",
     mission: "The GED module was used daily by multiple stakeholders across construction projects, but its complex interface and workflow were causing inefficiencies. My mission was to conduct comprehensive user research to identify specific pain points in the current system, validate a set of hypotheses about potential improvements, and provide clear recommendations for redesigning the module to significantly reduce the time and effort required to generate reports.",
     opportunity: "By redesigning the GED module based on actual user needs and behaviors, we could create a more intuitive document management system that would reduce report generation time, minimize errors, and improve collaboration between different stakeholders in construction projects. This would directly impact productivity on construction sites and potentially become a competitive advantage for Beyond InSite in the construction management software market.",
@@ -256,13 +254,13 @@ export const projectsData: ProjectsDataRecord = {
       "Conducted direct analysis of the current system through a 2-day immersive testing session with colleagues",
       "Developed a detailed panel grid to identify and recruit diverse user types across different roles and experience levels",
       "Created comprehensive interview guides with both detailed (V1) and focused (V2) question sets",
-      "Performed 12 semi-structured interviews with users from various roles including project directors, site managers, and document controllers",
+      "Performed 5 semi-structured interviews with users from various roles including project directors, site managers, and document controllers",
       "Combined interviews with direct observation of users interacting with the system to capture both stated and unstated pain points",
       "Analyzed current module features and developed 6 specific hypotheses about potential improvements"
     ],
     interviewFindings: [
-      "Navigation confusion: 8 out of 12 interviewees reported difficulties navigating between the 'List' and 'Search' tabs, confirming my hypothesis about combining these functions",
-      "Lost work during report generation: 11 out of 12 users experienced losing their document selections after being redirected during the report generation process",
+      "Navigation confusion: 3 out of 5 interviewees reported difficulties navigating between the 'List' and 'Search' tabs, confirming my hypothesis about combining these functions",
+      "Lost work during report generation: 4 out of 5 users experienced losing their document selections after being redirected during the report generation process",
       "Validation workflow issues: 75% of participants expressed frustration with the validation process, particularly the need to navigate away from document details to request validation",
       "Permission complexity: Most users found the process of adding approver groups and setting permissions to be unnecessarily complex and time-consuming",
       "Redundant report generation: 9 users mentioned the need to generate multiple reports when a single consolidated report would be more efficient",
@@ -287,8 +285,9 @@ export const projectsData: ProjectsDataRecord = {
     ],
     testimonial: {
       quote: "Les entretiens ont été très bien menés, nous permettant de comprendre clairement les difficultés rencontrées par nos utilisateurs. Les recommandations qui en découlent sont précises et actionables, ce qui nous donne une feuille de route claire pour améliorer le module GED.",
-      author: "Thomas Laurent",
-      title: "Product Manager, Sixense Digital"
+      author: "Julien Heddou",
+      title: "Product Manager, Sixense Digital",
+      image: "/reporting/heddou.png"
     },
     reflection: "This project reinforced the critical importance of combining different research methodologies. While the interviews provided valuable insights into user perceptions and frustrations, the direct observation revealed workarounds and inefficiencies that users had normalized and might not have mentioned explicitly.",
     reflectionPoints: [
@@ -302,19 +301,19 @@ export const projectsData: ProjectsDataRecord = {
     userInsights: [
       {
         quote: "Je perds constamment mes sélections quand je génère un rapport. C'est frustrant de devoir tout recommencer à chaque fois.",
-        persona: "Conducteur de travaux, 8 ans d'expérience"
+        persona: "Conducteur de travaux, 3 ans d'expérience"
       },
       {
         quote: "Pourquoi dois-je aller dans un autre onglet pour valider un document que je suis déjà en train de consulter? Ça n'a aucun sens.",
-        persona: "Directeur de projet, 12 ans d'expérience"
+        persona: "Directeur de projet, 5 ans d'expérience"
       },
       {
         quote: "Je passe la moitié de mon temps à basculer entre l'onglet Liste et l'onglet Recherche. Ce serait tellement plus simple s'ils étaient combinés.",
-        persona: "Gestionnaire documentaire, 3 ans d'expérience"
+        persona: "Gestionnaire documentaire, 2 ans d'expérience"
       },
       {
         quote: "La configuration des groupes d'approbation prend un temps fou. Le système devrait proposer des configurations automatiques basées sur les rôles.",
-        persona: "Administrateur système, 5 ans d'expérience"
+        persona: "Administrateur système, 1 an d'expérience"
       }
     ]
   }

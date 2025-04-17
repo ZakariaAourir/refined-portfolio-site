@@ -69,6 +69,17 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ project }) => {
             )}
           </div>
         </div>
+        <div className="gap-8 py-8 flex justify-center">
+          {project.overViewImages && project.overViewImages.map((image) => (
+            <div className="bg-gray-900 rounded-xl overflow-hidden">
+              <img 
+                src={image} 
+                alt="Overview" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

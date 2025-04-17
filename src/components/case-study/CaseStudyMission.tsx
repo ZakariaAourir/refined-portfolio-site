@@ -13,15 +13,15 @@ const CaseStudyMission: React.FC<CaseStudyMissionProps> = ({ project }) => {
   const getSectionTitle = () => {
     const category = project.category.toLowerCase();
     if (category.includes('research') || category.includes('industrial')) {
-      return "RESEARCH OBJECTIVE";
+      return "Research objective";
     } else if (category.includes('visual') || category.includes('icon')) {
-      return "DESIGN OBJECTIVE";
+      return "Design objective";
     } else if (category.includes('healthcare')) {
-      return "CARE MISSION";
+      return "Care mission";
     } else if (category.includes('fintech')) {
-      return "FINANCIAL MISSION";
+      return "Financial mission";
     } else {
-      return "MY MISSION";
+      return "My mission";
     }
   };
   
@@ -39,13 +39,16 @@ const CaseStudyMission: React.FC<CaseStudyMissionProps> = ({ project }) => {
           <div className="lg:col-span-2">
             <p className="text-lg text-gray-300 mb-8">{project.mission}</p>
             
-            {/* Before image or visualization would go here */}
-            <div className="rounded-xl overflow-hidden mb-8">
-              <img 
-                src="public/lovable-uploads/c253dd23-a0b3-4d85-ab47-78391ec541b1.png" 
-                alt="Before state of the product" 
-                className="w-full"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+              {project.financialMission && project.financialMission.map((image) => (
+                <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
+                  <img 
+                    src={image} 
+                    alt="Overview" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

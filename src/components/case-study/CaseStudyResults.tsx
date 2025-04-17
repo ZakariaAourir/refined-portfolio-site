@@ -52,7 +52,7 @@ const CaseStudyResults: React.FC<CaseStudyResultsProps> = ({ project }) => {
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
-                    src="https://randomuser.me/api/portraits/men/32.jpg" 
+                    src={project.testimonial.image}
                     alt={project.testimonial.author} 
                     className="w-full h-full object-cover"
                   />
@@ -62,12 +62,6 @@ const CaseStudyResults: React.FC<CaseStudyResultsProps> = ({ project }) => {
                   <p className="text-sm text-gray-400">{project.testimonial.title}</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="text-center">
-              <Link to="/contact" className="btn-primary">
-                Start a project together
-              </Link>
             </div>
           </div>
         </div>
