@@ -65,6 +65,9 @@ export interface ProjectData {
   }[];
   relevantResources?: string[];
   
+  // UI Research specific field
+  uiResearch?: string;
+  
   // Legacy fields maintained for backward compatibility
   mission?: string;
   opportunity?: string;
