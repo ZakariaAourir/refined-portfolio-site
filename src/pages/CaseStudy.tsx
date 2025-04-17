@@ -18,6 +18,7 @@ import CaseStudyUIScreenshots from '@/components/case-study/CaseStudyUIScreensho
 import CaseStudyValueProps from '@/components/case-study/CaseStudyValueProps';
 import CaseStudyInterviewFindings from '@/components/case-study/CaseStudyInterviewFindings';
 import CaseStudyUserInsights from '@/components/case-study/CaseStudyUserInsights';
+import CaseStudyInformationArchitecture from '@/components/case-study/CaseStudyInformationArchitecture';
 import { projectsData } from '@/data/projectsData';
 
 const CaseStudy = () => {
@@ -35,33 +36,47 @@ const CaseStudy = () => {
     <>
       <NavBar />
       
+      {/* Always display main sections */}
       <CaseStudyHero project={project} />
       <CaseStudyOverview project={project} />
+      
+      {/* Project Mission/Goals */}
       <CaseStudyMission project={project} />
+      
+      {/* Opportunity */}
       <CaseStudyOpportunity project={project} />
       
-      {/* Conditionally render value props section */}
+      {/* Value Props / Opportunities & Challenges */}
       <CaseStudyValueProps project={project} />
       
+      {/* Research Findings */}
       <CaseStudyResearch project={project} />
       
-      {/* Conditionally render interview findings */}
+      {/* Interview Findings */}
       <CaseStudyInterviewFindings project={project} />
       
-      {/* Conditionally render user insights */}
+      {/* User Insights */}
       <CaseStudyUserInsights project={project} />
       
+      {/* Information Architecture - new section */}
+      <CaseStudyInformationArchitecture project={project} />
+      
+      {/* Design Process */}
       <CaseStudyDesignProcess project={project} />
       
-      {/* Conditionally render UI design section */}
+      {/* UI Design */}
       <CaseStudyUIDesign project={project} />
       
-      {/* Conditionally render UI screenshots */}
+      {/* UI Screenshots */}
       <CaseStudyUIScreenshots project={project} />
       
+      {/* Results */}
       <CaseStudyResults project={project} />
+      
+      {/* Reflection / Key Learnings */}
       <CaseStudyReflection project={project} />
       
+      {/* Next Project */}
       {nextProject && (
         <CaseStudyNextProject 
           nextProjectSlug={nextProjectSlug} 

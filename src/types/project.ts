@@ -8,14 +8,72 @@ export interface ProjectData {
   role: string;
   tools?: string[];
   image: string;
+  
+  // Project Overview & Background
   overview?: string;
+  projectGoals?: string[];
+  challenges?: string[];
+  educationalContext?: string;
+  
+  // Research Phase
+  competitiveAnalysis?: string;
+  researchMethodology?: string;
+  researchData?: string[];
+  interviewInsights?: {
+    number: number;
+    insight: string;
+    quote?: string;
+  }[];
+  userPersonas?: string[];
+  personaPdfs?: string[];
+  
+  // Information Architecture & Planning
+  taskModels?: string;
+  userExperienceMaps?: string;
+  siteMaps?: string;
+  contentStructure?: string;
+  informationArchitectureImages?: string[];
+  
+  // Design Process
+  designProcess?: string;
+  lowFiPrototyping?: string;
+  wireframing?: string;
+  highFiPrototyping?: string;
+  usabilityTesting?: string;
+  visualDesign?: string;
+  abTesting?: string;
+  designImages?: string[];
+  
+  // Opportunities and Challenges
+  opportunities?: {
+    number: number;
+    description: string;
+  }[];
+  designChallenges?: {
+    number: number;
+    description: string;
+  }[];
+  
+  // Results & Conclusion
+  results?: string;
+  projectOutcomes?: string[];
+  limitations?: string[];
+  futureImprovements?: string[];
+  keyLearnings?: {
+    number: number;
+    learning: string;
+  }[];
+  relevantResources?: string[];
+  
+  // Legacy fields maintained for backward compatibility
   mission?: string;
   opportunity?: string;
-  researchData?: string[];
   valueProps?: string[];
-  designProcess?: string;
-  designImages?: string[];
-  results?: string;
+  interviewFindings?: string[];
+  userInsights?: {
+    quote: string;
+    persona: string;
+  }[];
   metrics?: string[];
   testimonial?: {
     quote: string;
@@ -32,12 +90,6 @@ export interface ProjectData {
     title?: string;
     description?: string;
     image?: string;
-  }[];
-  interviewFindings?: string[];
-  uiResearch?: string;
-  userInsights?: {
-    quote: string;
-    persona: string;
   }[];
   overViewImages?: string[];
   financialMission?: string[];
