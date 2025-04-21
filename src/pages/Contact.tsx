@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { toast } from "sonner";
+import { sendContactEmail } from "@/utils/email";
 
 interface FormData {
   name: string;
@@ -27,18 +27,25 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      await sendContactEmail(formData);
       toast.success("Message sent successfully!", {
-        description: "Thank you for your message. I'll get back to you soon!",
+        description:
+          "Thank you for your message. I'll get back to you soon!",
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      toast.error("Failed to send message", {
+        description:
+          "There was a problem sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
