@@ -75,7 +75,7 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ project }) => {
               <img 
                 src={image} 
                 alt="Overview" 
-                className="w-full h-64 object-cover"
+                className="w-full h-74 object-contain"
               />
             </div>
           ))}

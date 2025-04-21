@@ -26,7 +26,7 @@ export const reportingProject: ProjectData = {
     "Lost work during report generation: 4 out of 5 users experienced losing their document selections after being redirected during the report generation process",
     "Validation workflow issues: 75% of participants expressed frustration with the validation process, particularly the need to navigate away from document details to request validation",
     "Permission complexity: Most users found the process of adding approver groups and setting permissions to be unnecessarily complex and time-consuming",
-    "Redundant report generation: 9 users mentioned the need to generate multiple reports when a single consolidated report would be more efficient",
+    "Redundant report generation: 3 users mentioned the need to generate multiple reports when a single consolidated report would be more efficient",
     "Interface inconsistencies: Users frequently mentioned inconsistent terminology and button placements across different sections of the module"
   ],
   valueProps: [
@@ -78,5 +78,10 @@ export const reportingProject: ProjectData = {
       quote: "La configuration des groupes d'approbation prend un temps fou. Le système devrait proposer des configurations automatiques basées sur les rôles.",
       persona: "Administrateur système, 1 an d'expérience"
     }
-  ]
+  ],
+  overViewImages: ["/reporting/reporting-1.PNG", "/reporting/validation-1.JPG"],
+  financialMission: ["/reporting/persona-grid.png"],
+  opportunityImages: ["/reporting/workflow.jpg"],
+  designImages:  ["/reporting/timeline.png"],
+  researchDataImage: ["/reporting/grillpanel.PNG", "/reporting/grillpanel2.PNG", "/reporting/questions.PNG", "/reporting/questions2.PNG", "/reporting/questions3.PNG"]
 };

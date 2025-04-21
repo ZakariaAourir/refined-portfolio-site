@@ -39,7 +39,7 @@ const CaseStudyMission: React.FC<CaseStudyMissionProps> = ({ project }) => {
           <div className="lg:col-span-2">
             <p className="text-lg text-gray-300 mb-8">{project.mission}</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+            <div className="gap-8 py-8">
               {project.financialMission && project.financialMission.map((image) => (
                 <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
                   <img 

@@ -97,6 +97,8 @@ export interface ProjectData {
   overViewImages?: string[];
   financialMission?: string[];
   opportunityImages?: string[];
+  researchDataImage? :string[];
+  uiDesignImages?: string[];
 }
 
 export type ProjectsDataRecord = Record<string, ProjectData>;

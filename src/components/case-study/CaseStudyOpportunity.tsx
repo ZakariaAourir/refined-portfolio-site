@@ -75,7 +75,7 @@ const CaseStudyOpportunity: React.FC<CaseStudyOpportunityProps> = ({ project }) 
             )} */}
             
             {/* UI mockups */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+            <div className="gap-8 py-8">
             {project.opportunityImages && project.opportunityImages.map((image) => (
               <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
                 <img 

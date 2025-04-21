@@ -52,6 +52,9 @@ export const telehealthProject: ProjectData = {
     "Iteration based on testing yields dramatic improvements: Usability testing revealed unexpected pain points that were addressed through iterative design"
   ],
   nextProject: "iconset",
+  designImages: ["/telehealth/before-design.png"],
+  researchDataImage: ["/telehealth/research.png"],
+  uiDesignImages: ['/telehealth/design.png'],
   uiScreenshots: [
     {
       title: "Home Dashboard",
