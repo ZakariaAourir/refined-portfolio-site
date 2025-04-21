@@ -5,9 +5,9 @@ export const sendContactEmail = async (
   formData: { name: string; email: string; subject: string; message: string }
 ) => {
   // Replace these values with your actual EmailJS service/template/public keys
-  const SERVICE_ID = "YOUR_SERVICE_ID";
-  const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-  const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+  const SERVICE_ID = "service_wjeiewi";
+  const TEMPLATE_ID = "template_vke8bin";
+  const PUBLIC_KEY = "ZvFS6u2Qa0kBIhzJj";
 
   const templateParams = {
     from_name: formData.name,
