@@ -41,7 +41,7 @@ const CaseStudyUIDesign: React.FC<CaseStudyUIDesignProps> = ({ project }) => {
             
             {/* UI Screenshots grid will be handled by a separate component */}
             <div className="rounded-xl overflow-hidden">
-            {project.uiDesignImages.map((image) => (
+            {project.uiDesignImages && project.uiDesignImages.map((image) => (
               <img 
                 src={image} 
                 alt="Design visualization" 

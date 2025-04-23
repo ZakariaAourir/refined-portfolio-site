@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a>
               <a 
-                href="mailto:zakaria1997aouir@gmail.com" 
+                href="mailto:zack.designs01@gmail.com" 
                 className="text-white hover:text-accent transition-colors"
                 aria-label="Email"
               >
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="text-gray-400">zakaria1997aouir@gmail.com</li>
+              <li className="text-gray-400">zack.designs01@gmail.com</li>
               <li className="text-gray-400">Paris, France</li>
               <li>
                 <Link to="/contact" className="text-accent hover:underline">

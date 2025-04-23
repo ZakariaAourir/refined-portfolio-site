@@ -79,7 +79,7 @@ export const reportingProject: ProjectData = {
       persona: "Administrateur système, 1 an d'expérience"
     }
   ],
-  overViewImages: ["/reporting/reporting-1.PNG", "/reporting/validation-1.JPG"],
+  overViewImages: ["/reporting/reporting.PNG", "/reporting/validation.jpg", "/reporting/search.jpg", "/reporting/validation-visa.jpg"],
   financialMission: ["/reporting/persona-grid.png"],
   opportunityImages: ["/reporting/workflow.jpg"],
   designImages:  ["/reporting/timeline.png"],

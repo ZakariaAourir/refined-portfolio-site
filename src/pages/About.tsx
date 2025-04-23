@@ -6,49 +6,45 @@ import Footer from '@/components/Footer';
 
 const About = () => {
   const skills = [
-    { category: "UX Research", items: ["User Interviews", "Usability Testing", "Competitor Analysis", "Survey Design", "A/B Testing"] },
-    { category: "Design Tools", items: ["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator", "After Effects"] },
-    { category: "Other Skills", items: ["Information Architecture", "Wireframing", "Prototyping", "User Personas", "Design Systems"] }
+    { category: "UX Research", items: ["User Interviews", "Brainwriting", "Observation", "User Testing"] },
+    { category: "UX Design", items: ["Wireframing", "Prototyping", "Information Architecture", "Problem Definition & Ideation"] },
+    { category: "Design Tools", items: ["Figma", "Illustrator", "Photoshop", "Miro", "FigJam"] },
+    { category: "Technical Implementation", items: ["Angular", "React", "JavaScript/TypeScript"] },
+    { category: "Languages", items: ["English (Professional)", "Arabic (Native)", "French (Professional)"] }
   ];
   
   const experiences = [
     {
-      position: "Senior Product Designer",
-      company: "TechFront Solutions",
-      period: "2021 - Present",
-      description: "Leading the design of enterprise SaaS platforms, focusing on complex workflow optimization and data visualization."
+      position: "Front-end/UX Research Consultant",
+      company: "Davidson Consulting",
+      period: "2022 - Present",
+      description: "Working on multiple projects across various clients, developing and designing intuitive digital solutions."
     },
     {
-      position: "UX/UI Designer",
-      company: "Creative Digital Agency",
-      period: "2018 - 2021",
-      description: "Designed user experiences for mobile apps and web platforms across fintech, healthcare, and e-commerce sectors."
+      position: "Front-end Engineer",
+      company: "Freterium",
+      period: "2021 - 2022",
+      description: "Designed and developed web application interfaces from concept to implementation, enhancing performance, design principles across key front-end features and user experience."
     },
     {
-      position: "Junior UI Designer",
-      company: "StartUp Studio",
-      period: "2016 - 2018",
-      description: "Created visual designs for websites and mobile applications, collaborating with development teams to ensure design integrity."
+      position: "Front-end & UX/UI Consultant",
+      company: "Sowit",
+      period: "2020 - 2021",
+      description: "Created visual designs for websites , and helped developing UI features to ensure design integrity."
     }
   ];
   
   const education = [
     {
-      degree: "Master of Human-Computer Interaction",
-      institution: "Carnegie Mellon University",
-      year: "2016"
-    },
-    {
-      degree: "Bachelor of Fine Arts, Graphic Design",
-      institution: "Rhode Island School of Design",
-      year: "2014"
+      degree: "Software Engineering Degree",
+      institution: "National Institute of Posts and Telecommunications",
+      year: "2020"
     }
   ];
   
   const certifications = [
-    "Google UX Design Professional Certificate",
-    "Nielsen Norman Group UX Certification",
-    "Interaction Design Foundation UX Master Certification"
+    "UX Research Certification | Le Laptop Course",
+    "Udemy Certificate | The Complete Prompt Engineering for AI Bootcamp",
   ];
 
   return (
@@ -64,14 +60,14 @@ const About = () => {
                 Hi, I'm Zakaria Aourir
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                A product designer and UX researcher with a passion for creating intuitive, user-centered digital experiences.
+                A UX Designer with a 5+ years of web developement and passion for creating intuitive, user-centered digital experiences.
               </p>
               <div className="flex space-x-4">
                 <Link to="/contact" className="btn-primary">
                   Get in touch
                 </Link>
                 <a 
-                  href="/resume.pdf" 
+                  href="/resume/resume_za.pdf" 
                   className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/5 transition-colors duration-200"
                   target="_blank"
                   rel="noreferrer"
@@ -83,7 +79,7 @@ const About = () => {
             
             <div className="rounded-2xl overflow-hidden h-[500px]">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" 
+                src="public/me/me.jpg" 
                 alt="Zakaria Aourir" 
                 className="w-full h-full object-cover"
               />
@@ -204,7 +200,7 @@ const About = () => {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8659b8e77b27?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                  src="public/reporting/research.png" 
                   alt="Research" 
                   className="w-full h-full object-cover"
                 />

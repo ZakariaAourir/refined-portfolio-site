@@ -159,8 +159,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400 mb-1">Email</p>
-                      <a href="mailto:zakaria1997aouir@gmail.com" className="text-white hover:text-accent transition-colors">
-                        zakaria1997aouir@gmail.com
+                      <a href="mailto:zack.designs01@gmail.com" className="text-white hover:text-accent transition-colors">
+                      zack.designs01@gmail.com
                       </a>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                   Prefer to discuss your project directly? Schedule a free 30-minute consultation call.
                 </p>
                 <a 
-                  href="https://calendly.com" 
+                  href="https://calendly.com/zack-designs01/30min" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="btn-primary block text-center"
