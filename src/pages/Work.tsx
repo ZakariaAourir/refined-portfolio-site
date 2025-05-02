@@ -1,19 +1,29 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Shield } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { projectsData } from '@/data/projectsData';
+import { projectsData, hiddenProjects } from '@/data/projectsData';
 
 const Work = () => {
-  // Convert projectsData object to array for easier mapping and filter out telehealth
+  // Convert projectsData object to array for easier mapping
   const projects = Object.entries(projectsData)
-    .filter(([slug, _]) => slug !== 'telehealth')
     .map(([slug, data]) => ({
       id: slug,
-      ...data
+      ...data,
+      disabled: false
     }));
+  
+  // Add telehealth project with disabled flag
+  const telehealthProject = {
+    id: 'telehealth',
+    ...hiddenProjects.telehealth,
+    disabled: true
+  };
+  
+  // Combined projects list
+  const allProjects = [...projects, telehealthProject];
 
   return (
     <>
@@ -34,14 +44,25 @@ const Work = () => {
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {projects.map((project) => (
-              <div key={project.id} className="card-project">
+            {allProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className={`card-project relative ${project.disabled ? 'opacity-60' : ''}`}
+              >
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                    className={`w-full h-64 object-cover ${!project.disabled ? 'transition-transform duration-500 hover:scale-105' : ''}`}
                   />
+                  {project.disabled && (
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <div className="bg-black/70 px-4 py-2 rounded-md flex items-center gap-2">
+                        <Shield className="text-red-500" size={20} />
+                        <span className="text-white font-medium">Protected Project</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
@@ -56,12 +77,18 @@ const Work = () => {
                   <p className="text-gray-300 mb-4">
                     {project.subtitle || project.description}
                   </p>
-                  <Link
-                    to={`/case-study/${project.id}`} 
-                    className="inline-flex items-center text-accent hover:underline"
-                  >
-                    View case study <ArrowRight size={16} className="ml-2" />
-                  </Link>
+                  {!project.disabled ? (
+                    <Link
+                      to={`/case-study/${project.id}`} 
+                      className="inline-flex items-center text-accent hover:underline"
+                    >
+                      View case study <ArrowRight size={16} className="ml-2" />
+                    </Link>
+                  ) : (
+                    <span className="inline-flex items-center text-gray-500 cursor-not-allowed">
+                      Private case study <Shield size={16} className="ml-2" />
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
