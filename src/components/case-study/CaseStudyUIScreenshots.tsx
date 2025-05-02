@@ -1,12 +1,16 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ProjectData } from '@/types/project';
+import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
+import { X } from 'lucide-react';
 
 interface CaseStudyUIScreenshotsProps {
   project: ProjectData;
 }
 
 const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project }) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
   if (!project.uiScreenshots || project.uiScreenshots.length === 0) return null;
   
   // Determine section title based on project category
@@ -35,6 +39,10 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
       return "Interface Showcase";
     }
   };
+
+  const openImageModal = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+  };
   
   return (
     <section className="py-16 bg-gray-950">
@@ -48,11 +56,16 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
           {project.uiScreenshots.map((screenshot, index) => (
             <div key={index} className="bg-gray-900 rounded-xl overflow-hidden">
               {screenshot.image && screenshot.image !== "[INSERT" && (
-                <img 
-                  src={screenshot.image} 
-                  alt={screenshot.title || `UI Screenshot ${index + 1}`} 
-                  className="w-full h-64 object-contain py-2"
-                />
+                <div 
+                  className="cursor-pointer transition-opacity hover:opacity-90" 
+                  onClick={() => openImageModal(screenshot.image!)}
+                >
+                  <img 
+                    src={screenshot.image} 
+                    alt={screenshot.title || `UI Screenshot ${index + 1}`} 
+                    className="w-full h-64 object-contain py-2"
+                  />
+                </div>
               )}
               <div className="p-6">
                 {screenshot.title && (
@@ -66,6 +79,25 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
           ))}
         </div>
       </div>
+
+      {/* Image Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+        <DialogContent className="sm:max-w-[80%] bg-gray-900 border-gray-800 p-0">
+          <div className="relative w-full">
+            <DialogClose className="absolute top-2 right-2 z-10 rounded-full bg-gray-800/80 p-2 text-gray-300 hover:bg-gray-700">
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </DialogClose>
+            {selectedImage && (
+              <img 
+                src={selectedImage} 
+                alt="Full view" 
+                className="w-full object-contain max-h-[80vh]"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
