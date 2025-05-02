@@ -71,7 +71,7 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ project }) => {
         </div>
         <div className="flex flex-wrap -mx-4 py-8">
           {project.overViewImages && project.overViewImages.map((image, index) => (
-            <div key={index} className="w-full md:w-1/2 px-4 mb-8">
+            <div key={index} className="w-full px-4 mb-8">
               <div className="bg-gray-900 rounded-xl overflow-hidden">
                 <img 
                   src={image} 
