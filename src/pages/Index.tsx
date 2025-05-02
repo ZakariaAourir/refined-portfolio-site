@@ -6,8 +6,10 @@ import Footer from '@/components/Footer';
 import { projectsData } from '@/data/projectsData';
 
 const Index = () => {
-  // Get all projects for the homepage
-  const allProjects = Object.values(projectsData);
+  // Get all projects without telehealth
+  const allProjects = Object.entries(projectsData)
+    .filter(([slug, _]) => slug !== 'telehealth')
+    .map(([_, data]) => data);
   
   // Featured projects to show on homepage (first 3 projects)
   const featuredProjects = allProjects.slice(0, 3);

@@ -7,11 +7,13 @@ import Footer from '@/components/Footer';
 import { projectsData } from '@/data/projectsData';
 
 const Work = () => {
-  // Convert projectsData object to array for easier mapping
-  const projects = Object.entries(projectsData).map(([slug, data]) => ({
-    id: slug,
-    ...data
-  }));
+  // Convert projectsData object to array for easier mapping and filter out telehealth
+  const projects = Object.entries(projectsData)
+    .filter(([slug, _]) => slug !== 'telehealth')
+    .map(([slug, data]) => ({
+      id: slug,
+      ...data
+    }));
 
   return (
     <>
