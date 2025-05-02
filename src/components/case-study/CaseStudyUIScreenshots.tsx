@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import { ProjectData } from '@/types/project';
-import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
-import { X } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 interface CaseStudyUIScreenshotsProps {
   project: ProjectData;
@@ -82,12 +81,8 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
 
       {/* Image Modal */}
       <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
-        <DialogContent className="sm:max-w-[80%] bg-gray-900 border-gray-800 p-0">
+        <DialogContent className="sm:max-w-[80%] bg-gray-900 border-gray-800 p-6">
           <div className="relative w-full">
-            <DialogClose className="absolute top-2 right-2 z-10 rounded-full bg-gray-800/80 p-2 text-gray-300 hover:bg-gray-700">
-              <X className="h-5 w-5" />
-              <span className="sr-only">Close</span>
-            </DialogClose>
             {selectedImage && (
               <img 
                 src={selectedImage} 

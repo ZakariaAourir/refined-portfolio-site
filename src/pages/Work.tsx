@@ -54,7 +54,7 @@ const Work = () => {
                   <p className="text-gray-300 mb-4">
                     {project.subtitle || project.description}
                   </p>
-                  <Link 
+                  <Link
                     to={`/case-study/${project.id}`} 
                     className="inline-flex items-center text-accent hover:underline"
                   >
