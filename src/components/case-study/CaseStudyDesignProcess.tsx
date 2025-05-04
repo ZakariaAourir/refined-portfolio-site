@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyDesignProcessProps {
   project: ProjectData;
@@ -58,7 +59,7 @@ const CaseStudyDesignProcess: React.FC<CaseStudyDesignProcessProps> = ({ project
                 {project.designImages.map((image, index) => (
                   <img
                     key={index}
-                    src={image}
+                    src={getImagePath(image)}
                     alt={`Design process step ${index + 1}`}
                     className="w-full rounded-xl"
                   />
