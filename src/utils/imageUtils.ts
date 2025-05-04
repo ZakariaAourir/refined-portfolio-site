@@ -6,11 +6,18 @@
  * @returns The complete path with the base URL prepended
  */
 export const getImagePath = (path: string): string => {
+  // Handle null or empty paths
+  if (!path) {
+    console.error('Image path is empty or null');
+    return '';
+  }
+
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.substring(1) : path;
   
   // For paths that already include the base URL or are absolute URLs, return as is
   if (cleanPath.includes('http://') || cleanPath.includes('https://')) {
+    console.log('Using absolute URL:', cleanPath);
     return cleanPath;
   }
   
@@ -18,7 +25,12 @@ export const getImagePath = (path: string): string => {
   const pathWithoutPublic = cleanPath.startsWith('public/') 
     ? cleanPath.substring(7) // Remove 'public/' prefix
     : cleanPath;
+
+  // Get the base URL from environment variables
+  const baseUrl = import.meta.env.BASE_URL || '/';
   
   // Combine the base URL with the path
-  return `${import.meta.env.BASE_URL}${pathWithoutPublic}`;
+  const fullPath = `${baseUrl}${pathWithoutPublic}`;
+  console.log('Generated image path:', fullPath, 'from original:', path);
+  return fullPath;
 };

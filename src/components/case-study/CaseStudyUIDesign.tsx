@@ -40,16 +40,16 @@ const CaseStudyUIDesign: React.FC<CaseStudyUIDesignProps> = ({ project }) => {
           <div className="lg:col-span-2">
             <p className="text-lg text-gray-300 mb-8">{project.uiDesign}</p>
             
-            {/* UI Screenshots grid will be handled by a separate component */}
+            {/* UI Screenshots grid */}
             <div className="rounded-xl overflow-hidden">
-            {project.uiDesignImages && project.uiDesignImages.map((image, index) => (
-              <img 
-                key={index}
-                src={getImagePath(image)}
-                alt={`Design visualization ${index + 1}`}
-                className="w-full"
-              />
-            ))}
+              {project.uiDesignImages && project.uiDesignImages.map((image, index) => (
+                <img 
+                  key={index}
+                  src={getImagePath(image)}
+                  alt={`Design visualization ${index + 1}`}
+                  className="w-full mb-4"
+                />
+              ))}
             </div>
           </div>
         </div>

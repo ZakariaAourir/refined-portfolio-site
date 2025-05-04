@@ -40,8 +40,9 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
     }
   };
 
-  const openImageModal = (imageUrl: string) => {
-    setSelectedImage(imageUrl);
+  const openImageModal = (imagePath: string) => {
+    console.log('Opening modal with image path:', imagePath);
+    setSelectedImage(imagePath);
   };
   
   return (
@@ -58,7 +59,7 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
               {screenshot.image && screenshot.image !== "[INSERT" && (
                 <div 
                   className="cursor-pointer transition-opacity hover:opacity-90" 
-                  onClick={() => openImageModal(getImagePath(screenshot.image!))}
+                  onClick={() => openImageModal(screenshot.image!)}
                 >
                   <img 
                     src={getImagePath(screenshot.image)} 
