@@ -18,8 +18,7 @@ export const iconsetProject: ProjectData = {
     "Identified key visual elements like line consistency, minimalism, and clarity as critical for scientific communication",
     "Mapped specific cloning lab components requiring iconographic representation including DNA, cell culture equipment, technological tools, and laboratory environments",
     "Analyzed how color and form can communicate scientific precision and technological sophistication",
-    "Researched visual shorthand already established for genetic concepts (e.g., double helix for DNA) to leverage existing mental models",
-    "Interviewed laboratory technicians and researchers to understand the most critical equipment and processes that would require representation"
+    "Researched visual shorthand already established for genetic concepts (e.g., double helix for DNA) to leverage existing mental models"
   ],
   valueProps: [
     "Scientifically accurate yet visually accessible representations of complex laboratory concepts",
@@ -30,7 +29,6 @@ export const iconsetProject: ProjectData = {
   ],
   designProcess: "I led a series of four structured workshops to guide the icon design process. Beginning with research and visual language exploration, I identified key visual elements that communicate scientific precision and established parameters for the icon set. The second workshop focused on ideation and concept development, where I created detailed concepts for all 12 icons, each with clear descriptions and usage guidelines.\n\nIn the third workshop, I developed multiple design variations for each icon, exploring different styles, weights, and forms while establishing rules for consistency. For the final workshop, I conducted user testing with both scientific and general audiences to validate recognition and clarity, using this feedback to make data-driven refinements to the final designs.",
   uiDesign: "The final icon set features a cohesive visual system designed for maximum clarity and recognition. I established strict design parameters including consistent 2px stroke weight for primary elements with 1px for details, 2px rounded corners for an approachable yet professional feel, and a standardized 1:1 square canvas with 2px padding.\n\nThe icons utilize a 24x24 base grid with 12x12 subdivision for precise alignment and proportion. The color strategy employs a primarily monochromatic approach with teal accent colors for emphasis, allowing the icons to maintain clarity while providing flexibility for different interface needs. Each icon was tested and optimized to remain clear at sizes as small as 16x16px.\n\nThe 12 icons represent key elements of cloning laboratories: DNA Strand, Microscope, Test Tube, Stem Cell, Lab Technician, Petri Dish, DNA Replication, Computer (with genetic data visualization), Robot Arm, PCR Machine, Cloning Chamber, and AI. Each icon balances scientific accuracy with visual simplicity, creating immediate recognition while maintaining a consistent visual language across the set.",
-  results: "The icon set has been successfully implemented across laboratory software interfaces, scientific documentation, educational materials, and research publications. Feedback from the scientific community has been overwhelmingly positive, with users specifically praising the balance between accuracy and clarity, as well as the cohesive visual language across diverse laboratory concepts.",
   metrics: [
     "95% recognition rate among scientific audiences for all 12 icons",
     "87% recognition rate among general audiences, significantly higher than previous scientific iconography",
@@ -38,11 +36,6 @@ export const iconsetProject: ProjectData = {
     "93% success rate in recognizing icons at minimum size (16x16px)",
     "Adopted by 3 laboratory software interfaces within the first month after completion"
   ],
-  testimonial: {
-    quote: "These icons perfectly balance scientific accuracy with visual clarity. I could immediately identify each laboratory component while appreciating the consistent design system that unifies them.",
-    author: "Dr. Sarah Chen",
-    title: "Molecular Biologist, Gene Synthesis Lab"
-  },
   reflection: "This project demonstrated how thoughtful design can bridge the gap between complex scientific concepts and visual communication. By establishing a consistent visual language and focusing on the most essential elements of each concept, I was able to translate specialized laboratory components into an accessible visual vocabulary.",
   reflectionPoints: [
     "Scientific accuracy requires balance: Creating icons that are both scientifically accurate and visually simple required careful decisions about which details to preserve and which to simplify",
@@ -56,27 +49,10 @@ export const iconsetProject: ProjectData = {
     {
       title: "Complete Icon Set",
       description: "The full set of 12 cloning laboratory icons showing cohesive visual language",
-      image: "[INSERT COMPLETE ICON SET IMAGE URL]"
+      image: "/iconset/pres.png"
     },
-    {
-      title: "DNA and Genetics Icons",
-      description: "Close-up of the DNA Strand, DNA Replication, and Stem Cell icons",
-      image: "[INSERT DNA ICONS GROUP IMAGE URL]"
-    },
-    {
-      title: "Laboratory Equipment Icons",
-      description: "Close-up of the Microscope, Test Tube, Petri Dish, and PCR Machine icons",
-      image: "[INSERT EQUIPMENT ICONS GROUP IMAGE URL]"
-    },
-    {
-      title: "Technology Integration Icons",
-      description: "Close-up of the Computer, Robot Arm, AI, and Cloning Chamber icons",
-      image: "[INSERT TECHNOLOGY ICONS GROUP IMAGE URL]"
-    },
-    {
-      title: "Style Guide Specifications",
-      description: "Visual demonstration of the icon design system including grid, proportions, and styling rules",
-      image: "[INSERT STYLE GUIDE IMAGE URL]"
-    }
-  ]
+  ],
+  researchDataImage: ["/iconset/cards.png"],
+  designImages: ["/iconset/ideation.png", "/iconset/icon-ideas.png", "/iconset/sketches.png"],
+  uiDesignImages: ["/iconset/first-des.png"]
 };

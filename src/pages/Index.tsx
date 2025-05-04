@@ -217,7 +217,7 @@ performance and meet business objectives.
               </div>
               <div className="absolute -top-6 -right-6 bg-black p-4 rounded-lg shadow-xl">
                 <p className="text-sm text-gray-400 mb-1">Projects</p>
-                <p className="text-xl font-bold">30+</p>
+                <p className="text-xl font-bold">15+</p>
               </div>
             </div>
           </div>

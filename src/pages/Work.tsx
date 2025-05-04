@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { projectsData, hiddenProjects } from '@/data/projectsData';
@@ -58,8 +58,8 @@ const Work = () => {
                   {project.disabled && (
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                       <div className="bg-black/70 px-4 py-2 rounded-md flex items-center gap-2">
-                        <Shield className="text-red-500" size={20} />
-                        <span className="text-white font-medium">Protected Project</span>
+                        <Clock className="text-grey-500" size={20} />
+                        <span className="text-white font-medium">Coming soon</span>
                       </div>
                     </div>
                   )}
@@ -86,7 +86,7 @@ const Work = () => {
                     </Link>
                   ) : (
                     <span className="inline-flex items-center text-gray-500 cursor-not-allowed">
-                      Private case study <Shield size={16} className="ml-2" />
+                      Coming soon <Clock size={16} className="ml-2" />
                     </span>
                   )}
                 </div>
