@@ -80,7 +80,7 @@ const About = () => {
             
             <div className="rounded-2xl overflow-hidden h-[500px]">
               <img 
-                src={getImagePath(`public/me/me.jpg`)}
+                src={getImagePath("public/me/me.jpg")}
                 alt="Zakaria Aourir" 
                 className="w-full h-full object-cover"
               />
