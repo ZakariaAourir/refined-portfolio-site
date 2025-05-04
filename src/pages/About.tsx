@@ -200,7 +200,7 @@ const About = () => {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="public/reporting/research.png" 
+                  src={`${import.meta.env.BASE_URL}reporting/research.png`}
                   alt="Research" 
                   className="w-full h-full object-cover"
                 />
