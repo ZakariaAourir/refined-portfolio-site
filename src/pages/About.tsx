@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import { getImagePath } from '@/utils/imageUtils';
 
 const About = () => {
   const skills = [
@@ -79,7 +80,7 @@ const About = () => {
             
             <div className="rounded-2xl overflow-hidden h-[500px]">
               <img 
-                src="public/me/me.jpg" 
+                src={getImagePath(`public/me/me.jpg`)}
                 alt="Zakaria Aourir" 
                 className="w-full h-full object-cover"
               />
