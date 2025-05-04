@@ -201,7 +201,7 @@ const About = () => {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img 
-                  src="/refined-portfolio-site/reporting/research.png" 
+                  src="/reporting/research.png" 
                   alt="Research" 
                   className="w-full h-full object-cover"
                 />
