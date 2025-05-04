@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyResearchProps {
   project: ProjectData;
@@ -68,9 +69,10 @@ const CaseStudyResearch: React.FC<CaseStudyResearchProps> = ({ project }) => {
             {/* Research image */}
             
             <div className="rounded-xl overflow-hidden">
-            {project.researchDataImage && project.researchDataImage.map((image) => (
+            {project.researchDataImage && project.researchDataImage.map((image, index) => (
               <img 
-                src={image} 
+                key={index}
+                src={getImagePath(image)} 
                 alt="Research data visualization" 
                 className="w-full"
               />

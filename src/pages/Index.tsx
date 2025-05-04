@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { projectsData } from '@/data/projectsData';
+import { getImagePath } from '@/utils/imageUtils';
 
 const Index = () => {
   // Get all projects without telehealth
@@ -37,7 +39,7 @@ const Index = () => {
               {[1, 3, 4, 8].map((i) => (
                 <div key={i} className="w-8 h-8 rounded-full overflow-hidden">
                   <img 
-                    src={`public/clients/${i}.png`} 
+                    src={getImagePath(`public/clients/${i}.png`)} 
                     alt="Client avatar" 
                     className="w-full h-full object-cover"
                   />
@@ -75,7 +77,7 @@ performance and meet business objectives.
               {clientLogos.map((logo, idx) => (
                 <div key={`first-${idx}`} className="logo-item">
                   <img 
-                    src={logo} 
+                    src={getImagePath(logo)} 
                     alt={`Client logo ${idx + 1}`} 
                     className="w-66 md:w-90 h-auto" // Increased size
                   />
@@ -86,7 +88,7 @@ performance and meet business objectives.
               {clientLogos.map((logo, idx) => (
                 <div key={`second-${idx}`} className="logo-item">
                   <img 
-                    src={logo} 
+                    src={getImagePath(logo)} 
                     alt={`Client logo ${idx + 1}`} 
                     className="w-66 md:w-90 h-auto" // Increased size
                   />
@@ -110,7 +112,7 @@ performance and meet business objectives.
                 <div key={index} className="card-project">
                   <div className="relative overflow-hidden">
                     <img 
-                      src={project.image} 
+                      src={getImagePath(project.image)} 
                       alt={project.title} 
                       className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
                     />
@@ -206,7 +208,7 @@ performance and meet business objectives.
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src="public/me/me.jpg" 
+                  src={getImagePath("public/me/me.jpg")} 
                   alt="Zakaria Aourir" 
                   className="w-full h-full object-cover"
                 />

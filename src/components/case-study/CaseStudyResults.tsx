@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyResultsProps {
   project: ProjectData;
@@ -52,7 +53,7 @@ const CaseStudyResults: React.FC<CaseStudyResultsProps> = ({ project }) => {
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
-                    src={project.testimonial.image}
+                    src={getImagePath(project.testimonial.image)}
                     alt={project.testimonial.author} 
                     className="w-full h-full object-cover"
                   />

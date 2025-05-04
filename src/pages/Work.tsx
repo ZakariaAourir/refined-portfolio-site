@@ -1,10 +1,11 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight, Clock, Shield } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { projectsData, hiddenProjects } from '@/data/projectsData';
+import { getImagePath } from '@/utils/imageUtils';
 
 const Work = () => {
   // Convert projectsData object to array for easier mapping
@@ -51,15 +52,15 @@ const Work = () => {
               >
                 <div className="relative overflow-hidden">
                   <img 
-                    src={project.image} 
+                    src={getImagePath(project.image)} 
                     alt={project.title} 
                     className={`w-full h-64 object-cover ${!project.disabled ? 'transition-transform duration-500 hover:scale-105' : ''}`}
                   />
                   {project.disabled && (
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                       <div className="bg-black/70 px-4 py-2 rounded-md flex items-center gap-2">
-                        <Clock className="text-grey-500" size={20} />
-                        <span className="text-white font-medium">Coming soon</span>
+                        <Shield className="text-grey-500" size={20} />
+                        <span className="text-white font-medium">Protected Project</span>
                       </div>
                     </div>
                   )}
@@ -86,7 +87,7 @@ const Work = () => {
                     </Link>
                   ) : (
                     <span className="inline-flex items-center text-gray-500 cursor-not-allowed">
-                      Coming soon <Clock size={16} className="ml-2" />
+                      Protected content <Shield size={16} className="ml-2" />
                     </span>
                   )}
                 </div>
