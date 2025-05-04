@@ -12,22 +12,25 @@ export const getImagePath = (path: string): string => {
     return '';
   }
 
+  // Debug the incoming path
+  console.log('Processing image path:', path);
+
+  // For paths that already include the base URL or are absolute URLs, return as is
+  if (path.includes('http://') || path.includes('https://')) {
+    console.log('Using absolute URL:', path);
+    return path;
+  }
+  
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.substring(1) : path;
-  
-  // For paths that already include the base URL or are absolute URLs, return as is
-  if (cleanPath.includes('http://') || cleanPath.includes('https://')) {
-    console.log('Using absolute URL:', cleanPath);
-    return cleanPath;
-  }
   
   // Remove 'public/' prefix if present - this is a common mistake
   const pathWithoutPublic = cleanPath.startsWith('public/') 
     ? cleanPath.substring(7) // Remove 'public/' prefix
     : cleanPath;
 
-  // Get the base URL from environment variables
-  const baseUrl = import.meta.env.BASE_URL || '/';
+  // Get the base URL from environment variables or use default for GitHub Pages
+  const baseUrl = import.meta.env.BASE_URL || '/refined-portfolio-site/';
   
   // Combine the base URL with the path
   const fullPath = `${baseUrl}${pathWithoutPublic}`;
