@@ -12,7 +12,7 @@ export const tontinaProject: ProjectData = {
   duration: "3 Months",
   role: "UX Research Lead & Design Strategy",
   tools: ["Figma", "Instagram", "User Interviews", "Questionnaires", "Heuristic Evaluation", "Journey Mapping"],
-  image: "tontina/presentation-app.png",
+  image: "/refined-portfolio-site/tontina/presentation-app.png",
   overview: "I led the UX research and design strategy for Tontina, a mobile application that reimagines the traditional African tontine (rotating savings and credit association) for university students. Using distributed ledger technology (DLT), we created a secure, transparent system that allows students to finance their projects without facing traditional banking barriers like credit history requirements or high interest rates.",
   mission: "My mission was to transform a valuable cultural financial practice into a modern digital solution specifically tailored to students' needs. Through comprehensive user research, I identified that students face significant challenges with traditional financing options while also having concerns about trust and transparency in informal lending circles. The key challenge was creating a platform that preserved the community-based strengths of traditional tontines while adding the security, transparency, and ease-of-use of modern technology.",
   opportunity: "I recognized the opportunity to combine the time-tested community financing model of tontines with the security and transparency of distributed ledger technology. This unique approach allowed us to create a financing solution that was both culturally relevant and technologically advanced, addressing students' specific needs for project and academic funding.",
