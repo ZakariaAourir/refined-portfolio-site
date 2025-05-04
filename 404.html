@@ -10,7 +10,7 @@
         // MIT License
         // https://github.com/rafgraph/spa-github-pages
         (function(l) {
-            if (l.search[1] === '/') {
+            if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
                     return s.replace(/~and~/g, '&');
                 }).join('?');
@@ -20,11 +20,29 @@
             }
         }(window.location));
         
-        // Redirect to the index.html with the URL intact
-        var segmentCount = 1; // Adjust this based on your repo name (1 for single segment like "refined-portfolio-site")
-        var redirectUrl = window.location.pathname.replace(new RegExp('^(?:/[^/]+){' + segmentCount + '}'), '') || '/';
+        // Redirect to the index.html with the URL path as a route
+        const pathSegmentsToKeep = 1; // For repos like "refined-portfolio-site"
+        const path = window.location.pathname;
+        
+        const repoName = '/refined-portfolio-site';
+        // Extract the path after the repo name
+        let cleanPath = path;
+        if (path.indexOf(repoName) !== -1) {
+            cleanPath = path.substr(path.indexOf(repoName) + repoName.length);
+        }
+        
+        // If path is empty, default to root
+        if (!cleanPath || cleanPath === '/') {
+            cleanPath = '/';
+        }
+        
+        // Redirect preserving the original path
         window.location.replace(
-            window.location.origin + '/refined-portfolio-site/#' + redirectUrl + window.location.search
+            window.location.origin + 
+            repoName + 
+            '/#' + 
+            cleanPath + 
+            window.location.search
         );
     </script>
 </head>
