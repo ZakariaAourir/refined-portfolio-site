@@ -2,6 +2,7 @@
 import React from 'react';
 import { ProjectData } from '@/types/project';
 import { Network, LayoutGrid, FileText, Workflow } from 'lucide-react';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyInformationArchitectureProps {
   project: ProjectData;
@@ -92,7 +93,7 @@ const CaseStudyInformationArchitecture: React.FC<CaseStudyInformationArchitectur
                 {project.informationArchitectureImages.map((image, index) => (
                   <div key={index} className="rounded-xl overflow-hidden">
                     <img 
-                      src={image} 
+                      src={getImagePath(image)} 
                       alt={`Information architecture visual ${index + 1}`} 
                       className="w-full" 
                     />

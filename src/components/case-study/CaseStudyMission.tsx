@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyMissionProps {
   project: ProjectData;
@@ -43,7 +44,7 @@ const CaseStudyMission: React.FC<CaseStudyMissionProps> = ({ project }) => {
               {project.financialMission && project.financialMission.map((image) => (
                 <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
                   <img 
-                    src={image} 
+                    src={getImagePath(image)} 
                     alt="Overview" 
                     className="w-full h-full object-cover"
                   />
