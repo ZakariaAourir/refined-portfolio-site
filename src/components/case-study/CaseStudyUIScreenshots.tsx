@@ -87,7 +87,7 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
           <div className="relative w-full">
             {selectedImage && (
               <img 
-                src={getImagePath(selectedImage)} 
+                src={selectedImage} 
                 alt="Full view" 
                 className="w-full object-contain max-h-[80vh]"
               />
