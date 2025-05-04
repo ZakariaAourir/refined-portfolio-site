@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyOpportunityProps {
   project: ProjectData;
@@ -54,38 +55,18 @@ const CaseStudyOpportunity: React.FC<CaseStudyOpportunityProps> = ({ project }) 
           <div className="lg:col-span-2">
             <p className="text-lg text-gray-300 mb-8">{project.opportunity}</p>
             
-            {/* Value Proposition Box */}
-            {/* {project.valueProps && (
-              <div className="bg-gray-900 rounded-xl p-6 mb-8">
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <span className="inline-block w-6 h-6 rounded-full bg-accent/20 text-accent text-sm flex items-center justify-center mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78"/></svg>
-                  </span>
-                  VALUE PROPOSITION
-                </h3>
-                <ul className="space-y-2">
-                  {project.valueProps.map((prop, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span className="text-gray-400">{prop}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )} */}
-            
             {/* UI mockups */}
             <div className="gap-8 py-8">
-            {project.opportunityImages && project.opportunityImages.map((image) => (
-              <div className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
+            {project.opportunityImages && project.opportunityImages.map((image, index) => (
+              <div key={index} className="bg-gray-900 rounded-xl overflow-hidden flex items-center">
                 <img 
-                  src={image} 
+                  src={getImagePath(image)} 
                   alt="Overview" 
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
-          </div>
+            </div>
           </div>
         </div>
       </div>

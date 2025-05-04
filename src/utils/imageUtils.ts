@@ -14,7 +14,7 @@ export const getImagePath = (path: string): string => {
     return cleanPath;
   }
   
-  // Check if path already starts with 'public/'
+  // Remove 'public/' prefix if present - this is a common mistake
   const pathWithoutPublic = cleanPath.startsWith('public/') 
     ? cleanPath.substring(7) // Remove 'public/' prefix
     : cleanPath;

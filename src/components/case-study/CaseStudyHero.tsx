@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyHeroProps {
   project: ProjectData;
@@ -56,7 +57,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ project }) => {
           
           <div className="rounded-xl overflow-hidden">
             <img 
-              src={project.image} 
+              src={getImagePath(project.image)} 
               alt={project.title} 
               className="w-full h-full object-cover"
             />

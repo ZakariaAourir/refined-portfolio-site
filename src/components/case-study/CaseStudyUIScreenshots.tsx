@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ProjectData } from '@/types/project';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyUIScreenshotsProps {
   project: ProjectData;
@@ -57,10 +58,10 @@ const CaseStudyUIScreenshots: React.FC<CaseStudyUIScreenshotsProps> = ({ project
               {screenshot.image && screenshot.image !== "[INSERT" && (
                 <div 
                   className="cursor-pointer transition-opacity hover:opacity-90" 
-                  onClick={() => openImageModal(screenshot.image!)}
+                  onClick={() => openImageModal(getImagePath(screenshot.image!))}
                 >
                   <img 
-                    src={screenshot.image} 
+                    src={getImagePath(screenshot.image)} 
                     alt={screenshot.title || `UI Screenshot ${index + 1}`} 
                     className="w-full h-64 object-contain py-2"
                   />

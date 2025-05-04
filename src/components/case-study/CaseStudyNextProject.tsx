@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ProjectData, ProjectsDataRecord } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyNextProjectProps {
   nextProjectSlug: string;
@@ -23,7 +24,7 @@ const CaseStudyNextProject: React.FC<CaseStudyNextProjectProps> = ({
         
         <div className="rounded-xl overflow-hidden mb-8">
           <img 
-            src={nextProject.image} 
+            src={getImagePath(nextProject.image)} 
             alt={nextProject.title} 
             className="w-full h-64 object-cover"
           />

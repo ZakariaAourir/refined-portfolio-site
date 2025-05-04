@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ProjectData } from '@/types/project';
+import { getImagePath } from '@/utils/imageUtils';
 
 interface CaseStudyUIDesignProps {
   project: ProjectData;
@@ -41,10 +42,11 @@ const CaseStudyUIDesign: React.FC<CaseStudyUIDesignProps> = ({ project }) => {
             
             {/* UI Screenshots grid will be handled by a separate component */}
             <div className="rounded-xl overflow-hidden">
-            {project.uiDesignImages && project.uiDesignImages.map((image) => (
+            {project.uiDesignImages && project.uiDesignImages.map((image, index) => (
               <img 
-                src={image} 
-                alt="Design visualization" 
+                key={index}
+                src={getImagePath(image)}
+                alt={`Design visualization ${index + 1}`}
                 className="w-full"
               />
             ))}

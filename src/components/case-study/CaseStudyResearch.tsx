@@ -67,7 +67,6 @@ const CaseStudyResearch: React.FC<CaseStudyResearchProps> = ({ project }) => {
             </ul>
             
             {/* Research image */}
-            
             <div className="rounded-xl overflow-hidden">
             {project.researchDataImage && project.researchDataImage.map((image, index) => (
               <img 
