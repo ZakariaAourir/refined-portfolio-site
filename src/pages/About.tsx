@@ -68,7 +68,7 @@ const About = () => {
                   Get in touch
                 </Link>
                 <a 
-                  href="/resume/resume_za.pdf" 
+                  href="/resume/resume_front-developer.pdf" 
                   className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/5 transition-colors duration-200"
                   target="_blank"
                   rel="noreferrer"
