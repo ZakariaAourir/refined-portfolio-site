@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { toast } from "sonner";
@@ -129,7 +129,7 @@ const Contact = () => {
                 
                 <button
                   type="submit"
-                  className="btn-primary flex items-center justify-center min-w-[150px]"
+                  className="btn-primary flex items-center justify-center min-w-[150px] hover:scale-105 transition-transform duration-200"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -189,7 +189,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="bg-gray-900 rounded-xl p-6">
+              <div className="bg-gray-900 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-semibold mb-4">Schedule a Call</h3>
                 <p className="text-gray-400 mb-4">
                   Prefer to discuss your project directly? Schedule a free 30-minute consultation call.
@@ -202,6 +202,34 @@ const Contact = () => {
                 >
                   Book a free 30-min call
                 </a>
+              </div>
+              
+              {/* Social Links */}
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h3 className="text-xl font-semibold mb-4">Connect on Social</h3>
+                <div className="flex gap-4">
+                  <a 
+                    href="https://linkedin.com/in/zakaria-aourir" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+                  >
+                    <Linkedin size={20} />
+                    LinkedIn
+                  </a>
+                  <a 
+                    href="https://github.com/zakaria-aourir" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
+                  >
+                    <Github size={20} />
+                    GitHub
+                  </a>
+                </div>
+                <p className="text-center text-gray-400 text-sm mt-4">
+                  Or feel free to drop me a message on LinkedIn!
+                </p>
               </div>
             </div>
           </div>

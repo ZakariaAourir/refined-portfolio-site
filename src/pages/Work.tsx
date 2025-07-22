@@ -65,19 +65,34 @@ const Work = () => {
                     </div>
                   )}
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-sm text-gray-400">{project.category}</p>
-                    </div>
-                    <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                      {project.role.split('&')[0].trim()}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    {project.subtitle || project.description}
-                  </p>
+                 <div className="p-6">
+                   <div className="flex justify-between items-start mb-4">
+                     <div>
+                       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                       <p className="text-sm text-gray-400">{project.category}</p>
+                       
+                       {/* Category and tech stack tags */}
+                       <div className="flex flex-wrap gap-2 mt-3">
+                         {project.category.includes('UX') && (
+                           <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-medium">UX</span>
+                         )}
+                         {project.category.includes('Frontend') && (
+                           <span className="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs font-medium">Dev</span>
+                         )}
+                         {project.tools && project.tools.slice(0, 3).map((tool, idx) => (
+                           <span key={idx} className="px-2 py-1 bg-purple-500/10 text-purple-400 rounded text-xs font-medium">
+                             {tool}
+                           </span>
+                         ))}
+                       </div>
+                     </div>
+                     <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                       {project.role.includes('&') ? 'UX + Dev' : project.role.split('&')[0].trim()}
+                     </span>
+                   </div>
+                   <p className="text-gray-300 mb-4">
+                     {project.subtitle || project.description}
+                   </p>
                   {!project.disabled ? (
                     <Link
                       to={`/case-study/${project.id}`} 
