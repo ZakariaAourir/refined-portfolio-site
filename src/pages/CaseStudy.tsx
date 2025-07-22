@@ -19,6 +19,9 @@ import CaseStudyValueProps from '@/components/case-study/CaseStudyValueProps';
 import CaseStudyInterviewFindings from '@/components/case-study/CaseStudyInterviewFindings';
 import CaseStudyUserInsights from '@/components/case-study/CaseStudyUserInsights';
 import CaseStudyInformationArchitecture from '@/components/case-study/CaseStudyInformationArchitecture';
+import CaseStudyAiBobbyHero from '@/components/case-study/CaseStudyAiBobbyHero';
+import CaseStudyAiBobbyIdentity from '@/components/case-study/CaseStudyAiBobbyIdentity';
+import CaseStudyAiBobbyNextSteps from '@/components/case-study/CaseStudyAiBobbyNextSteps';
 import { projectsData } from '@/data/projectsData';
 
 const CaseStudy = () => {
@@ -31,6 +34,71 @@ const CaseStudy = () => {
   
   const nextProjectSlug = project.nextProject;
   const nextProject = nextProjectSlug ? projectsData[nextProjectSlug] : null;
+
+  // Special handling for Ai Bobby project
+  if (slug === 'aibobby') {
+    return (
+      <>
+        <NavBar />
+        
+        {/* Custom Ai Bobby Hero */}
+        <CaseStudyAiBobbyHero project={project} />
+        
+        {/* Project Overview */}
+        <CaseStudyOverview project={project} />
+        
+        {/* Challenge */}
+        <CaseStudyMission project={project} />
+        
+        {/* Research & Inspiration */}
+        <CaseStudyResearch project={project} />
+        
+        {/* Concept Development */}
+        <CaseStudyDesignProcess project={project} />
+        
+        {/* Iterations & Feedback */}
+        <section className="py-16 bg-gray-950">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <div>
+                <div className="sticky top-32">
+                  <p className="text-sm text-accent mb-2">04 | ITERATIONS & FEEDBACK</p>
+                  <h2 className="text-3xl font-bold mb-6">Refinement Process</h2>
+                </div>
+              </div>
+              <div className="lg:col-span-2">
+                <p className="text-lg text-gray-300 mb-8">
+                  {project.usabilityTesting}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Final Identity - Custom component */}
+        <CaseStudyAiBobbyIdentity project={project} />
+        
+        {/* Applications Gallery */}
+        <CaseStudyUIScreenshots project={project} />
+        
+        {/* Outcome */}
+        <CaseStudyResults project={project} />
+        
+        {/* Next Steps - Custom component */}
+        <CaseStudyAiBobbyNextSteps />
+        
+        {/* Next Project */}
+        {nextProject && (
+          <CaseStudyNextProject 
+            nextProjectSlug={nextProjectSlug} 
+            nextProject={nextProject} 
+          />
+        )}
+        
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
