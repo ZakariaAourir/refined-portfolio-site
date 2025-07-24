@@ -16,15 +16,21 @@ const Work = () => {
       disabled: false
     }));
   
-  // Add telehealth project with disabled flag
+  // Add disabled projects
   const telehealthProject = {
     id: 'telehealth',
     ...hiddenProjects.telehealth,
     disabled: true
   };
   
+  const aiBobbyProject = {
+    id: 'aibobby',
+    ...hiddenProjects.aibobby,
+    disabled: true
+  };
+  
   // Combined projects list
-  const allProjects = [...projects, telehealthProject];
+  const allProjects = [...projects, telehealthProject, aiBobbyProject];
 
   return (
     <>

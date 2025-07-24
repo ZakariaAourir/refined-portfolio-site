@@ -11,11 +11,12 @@ export const projectsData: ProjectsDataRecord = {
   // telehealth: telehealthProject, // Removed from public display
   iconset: iconsetProject,
   reporting: reportingProject,
-  aibobby: aiBobbyProject
+  // aibobby: aiBobbyProject // Removed from public display
 };
 
 // Keep the project data available but separate from the main export
 // This way the data is still in the codebase but not publicly accessible
 export const hiddenProjects: ProjectsDataRecord = {
-  telehealth: telehealthProject
+  telehealth: telehealthProject,
+  aibobby: aiBobbyProject
 };
