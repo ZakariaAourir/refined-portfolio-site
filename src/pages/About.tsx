@@ -107,7 +107,7 @@ const About = () => {
                   GitHub
                 </a>
                 <a 
-                  href="/resume/resume_front-developer.pdf" 
+                  href="/resume/Zakaria_Aourir_Frontend_UX_Engineer_2025.pdf" 
                   className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/5 transition-colors duration-200 inline-flex items-center gap-2"
                   target="_blank"
                   rel="noreferrer"
