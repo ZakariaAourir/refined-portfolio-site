@@ -92,9 +92,9 @@ const Work = () => {
                          ))}
                        </div>
                      </div>
-                     <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
-                       {project.role.includes('&') ? 'UX + Dev' : project.role.split('&')[0].trim()}
-                     </span>
+                      <span className="text-sm font-medium bg-accent/10 text-accent px-3 py-1 rounded-full">
+                        {project.role.includes('&') ? 'Engineering + UX' : project.role.split('&')[0].trim()}
+                      </span>
                    </div>
                    <p className="text-gray-300 mb-4">
                      {project.subtitle || project.description}

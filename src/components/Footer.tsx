@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zakaria Aourir</h3>
             <p className="text-gray-400 mb-6 max-w-lg">
-              A versatile UX designer with 5+ years of web developement, crafting intuitive digital experiences across multiple industries.
+              A Front-End Engineer who codes like a designer, with 5+ years creating clean, scalable interfaces for complex domains.
             </p>
             <div className="flex space-x-4">
               <a 

@@ -61,13 +61,13 @@ const About = () => {
                 Hi, I'm Zakaria Aourir
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                I'm Zakaria, a UX-obsessed Front-End Engineer who codes with empathy. Over the past 5 years, I've helped infrastructure and SaaS teams create interfaces that reduce complexity, onboard faster, and scale reliably.
+                I'm a Front-End Engineer who codes like a designer. I use Angular, React, and a deep understanding of UX to create clean, scalable, and user-friendly interfaces for complex domains—manufacturing, infrastructure, and enterprise software.
               </p>
               <p className="text-lg text-gray-400 mb-8">
-                I blend Angular, Figma, and user research to build systems that are not only usable — but quietly powerful.
+                My work starts before the code: user interviews, journey mapping, and prototyping help me ship features that people actually love using. I've led workshops, audited design systems, and reduced onboarding times by 30% through empathetic design.
               </p>
               <p className="text-lg text-gray-400 mb-8">
-                My recent passion? Using AI to augment UI experiences: smarter defaults, contextual prompts, and human-like assistance. Let's talk if you're building something users will love.
+                I'm especially curious about the intersection of AI and interface design—how prompts, intelligent defaults, and LLMs can simplify workflows.
               </p>
               
               {/* Company logos */}
@@ -214,15 +214,15 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">My Design Philosophy</h2>
+              <h2 className="text-3xl font-bold mb-6">My Development Philosophy</h2>
               <p className="text-gray-300 mb-4">
-                I believe that great design is about solving real problems for real people. Every pixel, every interaction, and every feature should serve a purpose and enhance the user's experience.
+                I believe that great interfaces are about solving real problems for real people. Every component, every interaction, and every feature should serve a purpose and enhance the user's experience.
               </p>
               <p className="text-gray-300 mb-4">
-                My approach combines strategic thinking with empathy, focusing on understanding users' needs, behaviors, and pain points before diving into solutions. I strive to create designs that are not only visually appealing but also intuitive, accessible, and impactful.
+                My approach combines technical expertise with empathy, focusing on understanding users' needs, behaviors, and pain points before diving into code. I strive to create interfaces that are not only performant but also intuitive, accessible, and impactful.
               </p>
               <p className="text-gray-300">
-                Beyond design tools and methodologies, I value collaboration, continuous learning, and a healthy dose of curiosity. I'm passionate about staying on top of industry trends and best practices, always looking for ways to grow and improve as a designer.
+                Beyond development tools and frameworks, I value collaboration, continuous learning, and a healthy dose of curiosity. I'm passionate about staying on top of industry trends and best practices, always looking for ways to grow and improve as an engineer.
               </p>
             </div>
             
@@ -267,7 +267,7 @@ const About = () => {
             Let's create something amazing together
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            If you're looking for a designer who is passionate about creating 
+            If you're looking for an engineer who is passionate about creating 
             intuitive and impactful digital experiences, I'd love to hear from you.
           </p>
           <Link to="/contact" className="btn-primary text-lg">

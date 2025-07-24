@@ -59,15 +59,12 @@ const Index = () => {
           
           <div className="flex flex-wrap justify-center gap-2 mb-8 fade-in-up animate-delay-300">
             <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors duration-200">Front-End Engineer</span>
-            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors duration-200">UX Designer</span>
-            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors duration-200">Prompt Architect</span>
+            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors duration-200">UX Design</span>
+            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors duration-200">AI & Interfaces</span>
           </div>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-6xl mx-auto fade-in-up animate-delay-300">
-            👋 I'm Zakaria, a UX designer focused on creating intuitive, accessible digital experiences through user-centered 
-methodologies and 5+ years of front-end development expertise. Specializes in combining user 
-research, interactive prototyping, and technical implementation to deliver solutions that enhance 
-performance and meet business objectives.
+            👋 I'm Zakaria, a Front-End Engineer who codes like a designer. I use Angular, React, and a deep understanding of UX to create clean, scalable, and user-friendly interfaces for complex domains—manufacturing, infrastructure, and enterprise software.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up animate-delay-300">
@@ -183,7 +180,7 @@ performance and meet business objectives.
                 Turning complex problems into elegant, user-friendly solutions
               </h2>
               <p className="text-gray-300 mb-8">
-                My approach merges analytical thinking with creative problem-solving to transform complex challenges into user-friendly experiences. Whether conducting user interviews, crafting wireframes, or implementing front-end code, I focus on creating products that are both beautiful and functional.
+                My work starts before the code: user interviews, journey mapping, and prototyping help me ship features that people actually love using. I've led workshops, audited design systems, and reduced onboarding times by 30% through empathetic design.
               </p>
               
               <p className="text-gray-300 mb-8">
