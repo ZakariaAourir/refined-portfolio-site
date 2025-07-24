@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/in/zakaria-aourir-851098164/" 
+                href="https://www.linkedin.com/in/zakaria-aourir-851098164" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-white hover:text-accent transition-colors"

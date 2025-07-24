@@ -85,7 +85,7 @@ const About = () => {
                   Get in touch
                 </Link>
                 <a 
-                  href="https://linkedin.com/in/zakaria-aourir" 
+                  href="https://www.linkedin.com/in/zakaria-aourir-851098164" 
                   className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/5 transition-colors duration-200 inline-flex items-center gap-2"
                   target="_blank"
                   rel="noreferrer"
@@ -96,7 +96,7 @@ const About = () => {
                   LinkedIn
                 </a>
                 <a 
-                  href="https://github.com/zakaria-aourir" 
+                  href="https://github.com/ZakariaAourir" 
                   className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/5 transition-colors duration-200 inline-flex items-center gap-2"
                   target="_blank"
                   rel="noreferrer"

@@ -209,7 +209,7 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold mb-4">Connect on Social</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="https://linkedin.com/in/zakaria-aourir" 
+                    href="https://www.linkedin.com/in/zakaria-aourir-851098164" 
                     target="_blank" 
                     rel="noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
@@ -218,7 +218,7 @@ const Contact = () => {
                     LinkedIn
                   </a>
                   <a 
-                    href="https://github.com/zakaria-aourir" 
+                    href="https://github.com/ZakariaAourir" 
                     target="_blank" 
                     rel="noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 py-3 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
